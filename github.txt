@@ -1,1 +1,32 @@
-welcome to github
+Preconditions:
+The user is on the login page of the application.
+The test environment is set up (browser, device, etc.).
+The user has valid credentials (username and password) or invalid credentials for testing.
+Test Steps:
+Step	Action	Expected Result	Status (Pass/Fail)
+1	Navigate to the login page of the application.	The login page should load successfully.	
+2	Enter a valid username in the username field.	The username should be entered correctly.	
+3	Enter a valid password in the password field.	The password should be entered correctly.	
+4	Click the "Login" button.	The user should be redirected to the dashboard or home page after successful login.	
+5	Verify if the user is logged in successfully.	The user should see their profile or dashboard page.	
+Negative Test Scenarios:
+Step	Action	Expected Result	Status (Pass/Fail)
+6	Enter an invalid username.	Error message: "Invalid username or password" should appear.	
+7	Enter an invalid password.	Error message: "Invalid username or password" should appear.	
+8	Leave the username and password fields blank and click the "Login" button.	An error message: "Username and password cannot be empty" should appear.	
+9	Enter a valid username but incorrect password.	Error message: "Invalid username or password" should appear.	
+Expected Results:
+The user should be able to log in with valid credentials and access the dashboard or homepage.
+An appropriate error message should appear for invalid credentials.
+All invalid login attempts should be blocked.
+Postconditions:
+The user is logged into the system (if valid credentials are used).
+No user should be logged in with invalid credentials.
+Test Data:
+Valid Credentials:
+
+Username: valid_user
+Password: valid_pass
+Invalid Credentials:
+
+Username: invalid_user
