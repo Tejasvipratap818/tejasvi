@@ -1,32 +1,37 @@
-Preconditions:
-The user is on the login page of the application.
-The test environment is set up (browser, device, etc.).
-The user has valid credentials (username and password) or invalid credentials for testing.
-Test Steps:
-Step	Action	Expected Result	Status (Pass/Fail)
-1	Navigate to the login page of the application.	The login page should load successfully.	
-2	Enter a valid username in the username field.	The username should be entered correctly.	
-3	Enter a valid password in the password field.	The password should be entered correctly.	
-4	Click the "Login" button.	The user should be redirected to the dashboard or home page after successful login.	
-5	Verify if the user is logged in successfully.	The user should see their profile or dashboard page.	
-Negative Test Scenarios:
-Step	Action	Expected Result	Status (Pass/Fail)
-6	Enter an invalid username.	Error message: "Invalid username or password" should appear.	
-7	Enter an invalid password.	Error message: "Invalid username or password" should appear.	
-8	Leave the username and password fields blank and click the "Login" button.	An error message: "Username and password cannot be empty" should appear.	
-9	Enter a valid username but incorrect password.	Error message: "Invalid username or password" should appear.	
-Expected Results:
-The user should be able to log in with valid credentials and access the dashboard or homepage.
-An appropriate error message should appear for invalid credentials.
-All invalid login attempts should be blocked.
-Postconditions:
-The user is logged into the system (if valid credentials are used).
-No user should be logged in with invalid credentials.
-Test Data:
-Valid Credentials:
+Test / Step	Description	Expected Result	PASS/FAIL	Comments	Evidence
+TC_001	Verify real-time stock synchronization from SAP ECC to Hybris	Stock levels should update in real-time in Hybris when changed in SAP ECC			
+Step 1	Change stock quantity of a product in SAP ECC	Stock should be updated in Hybris instantly			
+Step 2	Check the product stock level in Hybris	The updated stock value should match SAP ECC			
+Step 3	Place an order and verify stock deduction	Stock should reduce correctly in both systems
 
-Username: valid_user
-Password: valid_pass
-Invalid Credentials:
+| TC_002 | Verify product pricing synchronization | Prices in Hybris should match the SAP ECC contract pricing | | | |
+| Step 1 | Change product pricing in SAP ECC | Hybris should reflect updated pricing immediately | | | |
+| Step 2 | Login with B2B user & check pricing | Contract pricing should be displayed | | | |
 
-Username: invalid_user
+| TC_003 | Verify order & quote history sync | Order & Quote history should be fetched from SAP ECC correctly | | | |
+| Step 1 | Place an order in Hybris | Order should be stored in SAP ECC | | | |
+| Step 2 | Check order history in Hybris | Order details should match SAP ECC | | | |
+
+| TC_004 | Verify product status automation | Product should be updated as "Sellable" or "Obsolete" based on SAP ECC status | | | |
+| Step 1 | Change product status in SAP ECC | Status should automatically update in Hybris | | | |
+| Step 2 | Check if obsolete product is still available for purchase | Obsolete products should not be purchasable | | | |
+
+| TC_005 | Verify real-time order tracking sync | Order tracking details should be fetched from SAP ECC | | | |
+| Step 1 | Update an order's tracking number in SAP ECC | Tracking number should appear in Hybris order details | | | |
+
+Negative Test Cases
+Test / Step	Description	Expected Result	PASS/FAIL	Comments	Evidence
+TC_006	Test stock sync failure handling	If API call fails, system should log an error			
+Step 1	Simulate SAP ECC API failure	Hybris should display a stock sync error message			
+Step 2	Retry after some time	Sync should work correctly after API is restored			
+| TC_007 | Validate pricing sync failure | If pricing data is not fetched, system should handle gracefully | | | |
+| Step 1 | Disconnect pricing API | Default fallback price should be displayed instead of an error | | | |
+
+| TC_008 | Attempt to purchase an obsolete product | System should prevent order placement | | | |
+| Step 1 | Mark a product as "Obsolete" in SAP ECC | Product should be unavailable in Hybris | | | |
+
+| TC_009 | Check error handling for incorrect Impex file upload | If incorrect format is used, system should reject the file | | | |
+| Step 1 | Upload a malformed Impex file | System should log an error and reject it | | | |
+
+| TC_010 | Verify incorrect data mapping for B2B accounts | Incorrect mapping should be flagged | | | |
+| Step 1 | Enter incorrect B2BUnit data | Hybris should display an error message | | | |
