@@ -1,37 +1,77 @@
-Test / Step	Description	Expected Result	PASS/FAIL	Comments	Evidence
-TC_001	Verify real-time stock synchronization from SAP ECC to Hybris	Stock levels should update in real-time in Hybris when changed in SAP ECC			
-Step 1	Change stock quantity of a product in SAP ECC	Stock should be updated in Hybris instantly			
-Step 2	Check the product stock level in Hybris	The updated stock value should match SAP ECC			
-Step 3	Place an order and verify stock deduction	Stock should reduce correctly in both systems
+Test Case Document: SAP ECC & Hybris Data Synchronization
+Positive Test Cases
+TC_001: Verify Real-Time Stock Synchronization from SAP ECC to Hybris
+Description: Stock levels should update in real-time in Hybris when changed in SAP ECC.
 
-| TC_002 | Verify product pricing synchronization | Prices in Hybris should match the SAP ECC contract pricing | | | |
-| Step 1 | Change product pricing in SAP ECC | Hybris should reflect updated pricing immediately | | | |
-| Step 2 | Login with B2B user & check pricing | Contract pricing should be displayed | | | |
+Step 1: Login to SAP ECC and update the stock quantity of a product.
+Step 2: Login to Hybris as a B2B customer and search for the same product.
+Step 3: Verify that the stock level in Hybris matches the updated SAP ECC stock.
+Step 4: Place an order in Hybris and confirm that stock reduces accordingly in both systems.
+Expected Result: Stock updates should reflect instantly in Hybris, and orders should correctly deduct stock.
+TC_002: Verify Product Pricing Synchronization
+Description: Prices in Hybris should match the SAP ECC contract pricing.
 
-| TC_003 | Verify order & quote history sync | Order & Quote history should be fetched from SAP ECC correctly | | | |
-| Step 1 | Place an order in Hybris | Order should be stored in SAP ECC | | | |
-| Step 2 | Check order history in Hybris | Order details should match SAP ECC | | | |
+Step 1: Login to SAP ECC and update the product pricing for a specific B2B contract.
+Step 2: Login to Hybris as the respective B2B customer.
+Step 3: Search for the product and check its price.
+Expected Result: The contract pricing from SAP ECC should be displayed correctly in Hybris.
+TC_003: Verify Order & Quote History Synchronization
+Description: Order & Quote history should be fetched from SAP ECC correctly.
 
-| TC_004 | Verify product status automation | Product should be updated as "Sellable" or "Obsolete" based on SAP ECC status | | | |
-| Step 1 | Change product status in SAP ECC | Status should automatically update in Hybris | | | |
-| Step 2 | Check if obsolete product is still available for purchase | Obsolete products should not be purchasable | | | |
+Step 1: Login to Hybris as a B2B customer.
+Step 2: Place an order in Hybris.
+Step 3: Login to SAP ECC and verify that the order is recorded.
+Step 4: Return to Hybris and check the order history page.
+Expected Result: Order details in Hybris should match SAP ECC records.
+TC_004: Verify Product Status Automation
+Description: Product should be updated as "Sellable" or "Obsolete" based on SAP ECC status.
 
-| TC_005 | Verify real-time order tracking sync | Order tracking details should be fetched from SAP ECC | | | |
-| Step 1 | Update an order's tracking number in SAP ECC | Tracking number should appear in Hybris order details | | | |
+Step 1: Login to SAP ECC and mark a product as "Obsolete".
+Step 2: Run the product sync job or API call.
+Step 3: Login to Hybris as a B2B customer and search for the product.
+Step 4: Attempt to add the product to the cart.
+Expected Result: The product should be marked as obsolete in Hybris and should not be purchasable.
+TC_005: Verify Real-Time Order Tracking Sync
+Description: Order tracking details should be fetched from SAP ECC.
 
+Step 1: Place an order in Hybris as a B2B customer.
+Step 2: Login to SAP ECC and add tracking details for the order.
+Step 3: Login to Hybris and navigate to order history.
+Expected Result: The tracking number and delivery status should be visible in Hybris.
 Negative Test Cases
-Test / Step	Description	Expected Result	PASS/FAIL	Comments	Evidence
-TC_006	Test stock sync failure handling	If API call fails, system should log an error			
-Step 1	Simulate SAP ECC API failure	Hybris should display a stock sync error message			
-Step 2	Retry after some time	Sync should work correctly after API is restored			
-| TC_007 | Validate pricing sync failure | If pricing data is not fetched, system should handle gracefully | | | |
-| Step 1 | Disconnect pricing API | Default fallback price should be displayed instead of an error | | | |
+TC_006: Test Stock Sync Failure Handling
+Description: If API call fails, the system should log an error.
 
-| TC_008 | Attempt to purchase an obsolete product | System should prevent order placement | | | |
-| Step 1 | Mark a product as "Obsolete" in SAP ECC | Product should be unavailable in Hybris | | | |
+Step 1: Simulate an SAP ECC API failure (e.g., disconnect API).
+Step 2: Login to Hybris and check product stock availability.
+Step 3: Verify that an appropriate error message is logged.
+Step 4: Reconnect API and retry sync.
+Expected Result: System should handle failure gracefully and sync should work correctly after API is restored.
+TC_007: Validate Pricing Sync Failure
+Description: If pricing data is not fetched, the system should handle it gracefully.
 
-| TC_009 | Check error handling for incorrect Impex file upload | If incorrect format is used, system should reject the file | | | |
-| Step 1 | Upload a malformed Impex file | System should log an error and reject it | | | |
+Step 1: Disconnect the pricing API from SAP ECC.
+Step 2: Login to Hybris as a B2B customer.
+Step 3: Search for a product with contract pricing.
+Expected Result: A fallback price should be displayed instead of an error.
+TC_008: Attempt to Purchase an Obsolete Product
+Description: System should prevent order placement for obsolete products.
 
-| TC_010 | Verify incorrect data mapping for B2B accounts | Incorrect mapping should be flagged | | | |
-| Step 1 | Enter incorrect B2BUnit data | Hybris should display an error message | | | |
+Step 1: Mark a product as "Obsolete" in SAP ECC.
+Step 2: Login to Hybris and search for the product.
+Step 3: Try adding the product to the cart.
+Expected Result: The product should be unavailable for purchase.
+TC_009: Check Error Handling for Incorrect Impex File Upload
+Description: If incorrect format is used, the system should reject the file.
+
+Step 1: Create an Impex file with missing or incorrect data fields.
+Step 2: Upload the file in Hybris.
+Step 3: Check the import status.
+Expected Result: System should log an error and reject the Impex file.
+TC_010: Verify Incorrect Data Mapping for B2B Accounts
+Description: Incorrect mapping should be flagged as an error.
+
+Step 1: Modify a B2B account mapping in SAP ECC with incorrect data.
+Step 2: Run the B2B data sync.
+Step 3: Login to Hybris and check account details.
+Expected Result: System should flag the incorrect mapping and display an error.
