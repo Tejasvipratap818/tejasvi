@@ -1,0 +1,45 @@
+Test / Step | Description | Expected Result | PASS/FAIL | Comments | Evidence
+TC_001 | Verify Freight Code Mapping from SAP ECC to Hybris
+
+Step 1: Login to SAP ECC and navigate to the customer master data.
+Step 2: Locate the "Freight Paid By" field and update it with a valid freight code.
+Step 3: Verify that the updated freight code is correctly mapped to the corresponding B2BUnit in Hybris.
+Expected Result: Freight Code from SAP ECC should be mapped correctly to the B2BUnit in Hybris.
+TC_002 | Verify Auto-Selection of Freight Code During Checkout
+
+Step 1: Login to the Hybris B2B store with a user associated with a mapped B2BUnit.
+Step 2: Add products to the cart and proceed to checkout.
+Step 3: Verify that the freight code is pre-selected automatically.
+Expected Result: The correct freight code should be auto-selected based on the user’s B2BUnit.
+TC_003 | Verify Freight Code Configuration in Hybris
+
+Step 1: Navigate to the Hybris Backoffice and open the Freight Code configuration section.
+Step 2: Validate that all necessary freight data (names, thresholds, prices) are available.
+Expected Result: Freight codes should be correctly configured in Hybris with all required attributes.
+TC_004 | Verify Freight Charges Calculation in Quotation Process
+
+Step 1: Create a quotation for a B2B customer in Hybris.
+Step 2: Verify that the correct freight charge is applied based on the configured freight code.
+Expected Result: Freight charges should be calculated and displayed accurately in the quotation.
+TC_005 | Verify Freight Charges Application During Checkout
+
+Step 1: Proceed to checkout with an order that meets the freight threshold.
+Step 2: Verify that the correct freight charge is applied in the final order summary.
+Expected Result: The correct freight charge should be applied and included in the order confirmation.
+Negative Test Cases
+
+TC_006 | Verify Error Handling for Missing Freight Code Mapping
+
+Step 1: Attempt checkout with a user whose B2BUnit has no freight code mapping.
+Step 2: Check if the system allows checkout or throws an error.
+Expected Result: The system should either prompt the user to select a freight code or prevent checkout.
+TC_007 | Verify Error Handling for Incorrect Freight Code in SAP ECC
+
+Step 1: Enter an invalid or non-configured freight code in SAP ECC.
+Step 2: Verify if the freight code syncs to Hybris or triggers an error.
+Expected Result: Hybris should reject incorrect freight codes and log an error.
+TC_008 | Verify Incorrect Freight Charges Calculation
+
+Step 1: Create a quotation and manually override the freight charge.
+Step 2: Compare the applied charge with the expected configured charge.
+Expected Result: The system should not allow incorrect freight charge overrides.
