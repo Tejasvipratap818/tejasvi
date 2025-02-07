@@ -1,0 +1,44 @@
+TC_001 Verify that the platform supports 7 languages (FR, EN, DE, ES, IT, SE, NL).
+
+Step 1: Navigate to the platform and log in with a B2B user.Step 2: Verify that the default language is set based on the user's B2BUnit country.Step 3: Manually change the language from the interface.Step 4: Validate that all text elements, labels, and messages appear correctly in the selected language.
+
+Expected Result: The platform displays content in the selected language and correctly applies the default language based on the user's B2BUnit.
+
+TC_002 Verify that the platform supports 3 currencies (EUR, GBP, SEK) based on the user's country.
+
+Step 1: Log in with a B2B user from a country using EUR.Step 2: Validate that product prices are displayed in EUR.Step 3: Log in with a B2B user from a country using GBP.Step 4: Validate that product prices are displayed in GBP.Step 5: Log in with a B2B user from a country using SEK.Step 6: Validate that product prices are displayed in SEK.
+
+Expected Result: Prices should automatically display in the correct local currency based on the user's country.
+
+TC_003 Verify that users can manually select a different language from the interface.
+
+Step 1: Navigate to the language selection option.Step 2: Change the language from the dropdown.Step 3: Verify that all UI elements update to the newly selected language.
+
+Expected Result: The platform correctly updates the language without requiring a page refresh.
+
+TC_004 Verify that users can manually select a different currency.
+
+Step 1: Navigate to the currency selection option.Step 2: Change the currency from the dropdown.Step 3: Validate that all product prices update to reflect the selected currency.
+
+Expected Result: The platform correctly updates prices based on the selected currency.
+
+TC_005 Verify that language and currency settings persist in the user session.
+
+Step 1: Change language and currency settings.Step 2: Refresh the page or navigate to a different section of the platform.Step 3: Verify that the selected settings remain unchanged.
+
+Expected Result: Language and currency settings should be stored in the user session and persist across navigation.
+
+TC_006 Verify that prices are displayed with correct formatting for each currency.
+
+Step 1: Log in as a B2B user from different countries.Step 2: Check the price display format for EUR, GBP, and SEK.Step 3: Ensure currency symbols, decimal separators, and thousands separators are correctly applied.
+
+Expected Result: Prices should follow the correct formatting rules based on the selected currency.
+
+TC_007 Verify that currency and language selection work correctly on mobile and desktop versions.
+
+Step 1: Perform all language and currency selection steps on a desktop browser.Step 2: Repeat the steps on a mobile browser or mobile app.
+
+Expected Result: Language and currency selection should work seamlessly across different devices.
+
+These test cases will help ensure that the multi-language and multi-currency functionality works correctly and provides a localized experience to Western European users.
+
