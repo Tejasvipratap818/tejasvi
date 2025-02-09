@@ -43,3 +43,14 @@ TC_008 | Verify Incorrect Freight Charges Calculation
 Step 1: Create a quotation and manually override the freight charge.
 Step 2: Compare the applied charge with the expected configured charge.
 Expected Result: The system should not allow incorrect freight charge overrides.
+
+........................................................................................
+
+TC_007	Simulate API failure or invalid response	The system should simulate a failed API response
+Step 1	Verify Hybris behavior on PDP, PLP, and cart pages	Hybris should show a fallback message or default stock status
+TC_008	Trigger API errors (e.g., invalid warehouse ID, missing parameters)	API errors should be triggered correctly
+Step 1	Check system logs and error messages	Errors should be logged with detailed messages indicating the cause
+TC_009	Trigger stock API request for multiple products	Stock API request should be triggered for multiple products
+Step 1	Measure response time	Response time should be measured
+Step 2	Ensure response time is within acceptable limits (< 2 seconds)	The response time should be less than 2 seconds
+
