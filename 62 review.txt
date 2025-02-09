@@ -1,0 +1,18 @@
+Ye user story keh rahi hai ki eCommerce platform ko Western Europe ke liye localized experience dene ke liye modify karna hai.
+
+Key Points:
+Multi-language & Multi-currency Support:
+
+Platform par users apni preferred language aur currency ke saath interact kar sakein.
+Ye feature pehle JDE PSS & GSS process ke liye exist karta hai, bas FLC needs ke liye tweak karna hai.
+Acceptance Criteria:
+✅ 7 Languages Support: French (FR), English (EN), German (DE), Spanish (ES), Italian (IT), Swedish (SE), Dutch (NL).
+✅ 3 Currencies Support: Euro (EUR), British Pound (GBP), Swedish Krona (SEK).
+✅ Automatic & Manual Selection:
+
+Language aur currency B2BUnit country ke basis par automatically apply ho jaye.
+Users manually bhi interface par change kar sakein.
+✅ Correct Price Formatting:
+Local currency mein accurate formatting ke saath price display ho.
+✅ Session Persistence:
+Jo bhi language aur currency settings user select kare, woh session mein store ho taki navigation ke dauraan consistent experience mile.
