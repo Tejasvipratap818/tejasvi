@@ -1,0 +1,95 @@
+Negative Test Case: Verify Language Change Restriction for Logged-in Users
+TC_009 | Verify Language Change Restriction for Logged-in Users
+
+Step 1: Log in as a B2B user whose assigned country has only one language.
+Step 2: Attempt to manually change the language from the UI.
+Expected Result: The system should prevent the language change and retain the assigned default language.
+
+Negative Test Case: Verify Currency Selection for Non-Logged-in Users
+TC_010 | Verify Currency Selection for Non-Logged-in Users
+
+Step 1: Open the eCommerce platform without logging in.
+Step 2: Attempt to manually select a different currency.
+Expected Result: The system should allow the currency selection, but prices should not be visible for Western Europe users.
+
+Let me know if you need modifications or more test cases! 😊
+
+
+
+
+
+
+You said:
+positive test case de 
+ChatGPT said:
+Here are the positive test cases based on your requirements:
+
+Positive Test Case: Verify Language Change for Logged-in Users with Multiple Languages
+TC_011 | Verify Language Change for Logged-in Users with Multiple Languages
+
+Step 1: Log in as a B2B user whose assigned country (e.g., Switzerland) or B2BUnit has multiple languages.
+Step 2: Navigate to the language selection option in the UI.
+Step 3: Attempt to change the language.
+Expected Result: The system should allow the language change, and all UI elements should update accordingly.
+
+Positive Test Case: Verify Currency Selection for Non-Logged-in Users
+TC_012 | Verify Currency Selection for Non-Logged-in Users
+
+Step 1: Open the eCommerce platform without logging in.
+Step 2: Navigate to the currency selection dropdown.
+Step 3: Select a different currency (EUR, GBP, or SEK).
+Expected Result: The system should successfully apply the selected currency, and prices should be displayed in the correct format.
+
+Let me know if you need any refinements! 😊
+
+
+
+
+
+
+You said:
+only ispe hi test case de 
+
+Not allowed if you are logged in unless country has more languages 
+ like Switzerland or if the B2B uit you are logged in as has multiple languages assigned in BO	
+ChatGPT said:
+Positive Test Case: Verify Language Change Restriction for Logged-in Users
+TC_013 | Verify Language Change Restriction for Logged-in Users
+
+Step 1: Log in as a B2B user whose country does not support multiple languages.
+Step 2: Navigate to the language selection option in the UI.
+Step 3: Attempt to change the language.
+Expected Result: The system should restrict the language change, and an appropriate message should be displayed.
+
+TC_014 | Verify Allowed Language Change for Specific Countries and B2B Units
+
+Step 1: Log in as a B2B user from a country that supports multiple languages (e.g., Switzerland) or whose B2BUnit has multiple languages assigned in Backoffice.
+Step 2: Navigate to the language selection option in the UI.
+Step 3: Attempt to change the language.
+Expected Result: The system should allow the language change, and the UI should update accordingly.
+
+Let me know if you need any refinements! 😊
+
+
+
+
+
+
+You said:
+Verify that non logged in users can manually select a different currency.		
+Not valid as you do not see the price for western europe
+ChatGPT said:
+Positive Test Case: Verify Currency Selection for Non-Logged-In Users
+TC_015 | Verify Manual Currency Selection for Non-Logged-In Users
+
+Step 1: Open the eCommerce platform without logging in.
+Step 2: Navigate to the currency selection option.
+Step 3: Manually select a different currency (e.g., switch from EUR to GBP).
+Expected Result: The selected currency should update in the UI, and all displayed prices should be converted accordingly.
+
+TC_016 | Verify Currency Selection Does Not Display Prices for Western Europe
+
+Step 1: Open the eCommerce platform without logging in.
+Step 2: Navigate to the currency selection option.
+Step 3: Manually select a different currency while being in a Western Europe region.
+Expected Result: The system should allow currency selection, but product prices should remain hidden, as pricing is not visible for Western Europe regions.
