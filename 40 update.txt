@@ -7,3 +7,5 @@ Step 4: Compare the order status in Baxter, SAP ECC, and Hybris to ensure consis
 
 Expected Result: The order data should successfully sync from Baxter to SAP ECC and match the corresponding data in Hybris without discrepancies.
 
+40.......................
+verify that any field update in sap ecc replicated to backoffice(B2B unut)							
