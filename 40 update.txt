@@ -1,0 +1,9 @@
+TC_010 | Verify Order Data Synchronization from Baxter to SAP ECC and Hybris
+
+Step 1: Place an order in Baxter.
+Step 2: Verify that the order data is correctly transmitted to SAP ECC.
+Step 3: Check if the same order details (products, prices, quantities, customer information) are accurately reflected in Hybris.
+Step 4: Compare the order status in Baxter, SAP ECC, and Hybris to ensure consistency.
+
+Expected Result: The order data should successfully sync from Baxter to SAP ECC and match the corresponding data in Hybris without discrepancies.
+
