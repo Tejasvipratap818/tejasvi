@@ -16,3 +16,10 @@ Users manually bhi interface par change kar sakein.
 Local currency mein accurate formatting ke saath price display ho.
 ✅ Session Persistence:
 Jo bhi language aur currency settings user select kare, woh session mein store ho taki navigation ke dauraan consistent experience mile.
+
+update62
+Not allowed if you are logged in unless country has more languages 
+ like Switzerland or if the B2B uit you are logged in as has multiple languages assigned in BO		
+
+Verify that non logged in users can manually select a different currency.		
+Not valid as you do not see the price for western europe					
