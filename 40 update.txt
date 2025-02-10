@@ -8,4 +8,22 @@ Step 4: Compare the order status in Baxter, SAP ECC, and Hybris to ensure consis
 Expected Result: The order data should successfully sync from Baxter to SAP ECC and match the corresponding data in Hybris without discrepancies.
 
 44.......................
-verify that any field update in sap ecc replicated to backoffice(B2B unut)							
+verify that any field update in sap ecc replicated to backoffice(B2B unut)		
+
+TC_014 | Verify Field Update Synchronization from SAP ECC to Hybris Backoffice
+
+Step 1: Update a field (e.g., company name, email, phone number) in SAP ECC for a B2B Unit.
+Step 2: Trigger the synchronization process.
+Step 3: Navigate to Hybris Backoffice and locate the corresponding B2B Unit.
+Step 4: Verify that the updated field is correctly reflected in Hybris.
+
+Expected Result: The updated field should be accurately synchronized from SAP ECC to Hybris Backoffice.
+
+TC_015 | Verify New B2B Unit Creation in SAP ECC and Synchronization to Hybris
+
+Step 1: Create a new B2B Unit in SAP ECC.
+Step 2: Trigger the synchronization process.
+Step 3: Check if the new B2B Unit appears in Hybris Backoffice.
+Step 4: Validate that all mandatory fields are populated correctly.
+
+Expected Result: The new B2B Unit should be created in Hybris with correct details.					
