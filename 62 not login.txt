@@ -15,6 +15,23 @@ Expected Result: The system should allow the currency selection, but prices shou
 Let me know if you need modifications or more test cases! 😊
 
 
+new update ..............................
+
+Test / Step	Description	Expected Result	PASS/FAIL	Comments	Evidence
+Description	Ensure that logged-in users cannot change the language unless their country supports multiple languages (e.g., Switzerland) or their assigned B2B unit has multiple languages in BO.				
+Step 1	Log in as a user from a country with a single language (e.g., France).	Login successful			
+Step 2	Attempt to change the language from the UI.	Language selection should be disabled or show an error message.			
+Step 3	Log in as a user from a country with multiple languages (e.g., Switzerland).	Login successful			
+Step 4	Attempt to change the language from the UI.	Language selection should be allowed and should reflect the supported languages.			
+Step 5	Log in as a user whose B2B unit has multiple languages assigned in BO.	Login successful			
+Step 6	Attempt to change the language from the UI.	Language selection should be allowed and should reflect the languages assigned in BO.
+
+Description	Verify that non-logged-in users can manually select a different currency.				
+Step 1	Access the platform as a non-logged-in user.	The platform should be accessible without login.			
+Step 2	Attempt to change the currency manually.	Currency selection should be available.			
+Step 3	Verify if prices are displayed after selecting a different currency.	Not valid as prices are not visible for Western Europe.
+
+
 
 
 
