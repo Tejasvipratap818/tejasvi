@@ -94,3 +94,10 @@ Agar aapko kisi specific area me aur depth chahiye toh batao! 😊
 new update ............
 
 Verify that for products that are not available in a country, on PDP 'In stock' 'Out of Stock' flags are not visisble
+
+........answer
+
+Description	Verify that for products that are not available in a country, the 'In stock' and 'Out of Stock' flags are not visible on the PDP.				
+Step 1	Log in as a user from a country where the product is not available.	Login successful.			
+Step 2	Navigate to the Product Detail Page (PDP) of an unavailable product.	The PDP should load successfully.			
+Step 3	Verify the presence of 'In stock' and 'Out of Stock' flags on the PDP.	The flags should not be visible.	
