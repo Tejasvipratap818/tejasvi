@@ -88,3 +88,9 @@ Summary:
 Ye queries business logic, checkout behavior, SAP integration, pricing, aur error handling ko clarify karne me help karegi. Isse aapko clear implementation roadmap milega, aur future issues avoid honge.
 
 Agar aapko kisi specific area me aur depth chahiye toh batao! 😊
+
+
+
+new update ............
+
+Verify that for products that are not available in a country, on PDP 'In stock' 'Out of Stock' flags are not visisble
