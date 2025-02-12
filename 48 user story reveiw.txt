@@ -143,3 +143,15 @@ Expected Result: The system should not allow incorrect freight charge overrides.
 Summary
 TC_003 to TC_005 focus on verifying correct freight code setup, calculation, and application.
 TC_006 to TC_008 check how the system handles missing, incorrect, or manipulated freight 
+
+.............
+Verify that for B2B units for which freight is not applicable, 
+no freight charges appear on checkout
+
+Reason( Valuye of the cart or an agreement)
+
+
+Verify that on the checkout, you can change the default shipping method							
+
+Verify that in Hybris if for B2B unit any coupon is applicable on shipping, 
+then shipping charge is removed or reduced
