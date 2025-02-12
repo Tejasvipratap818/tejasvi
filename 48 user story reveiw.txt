@@ -155,3 +155,25 @@ Verify that on the checkout, you can change the default shipping method
 
 Verify that in Hybris if for B2B unit any coupon is applicable on shipping, 
 then shipping charge is removed or reduced
+
+answer update 
+
+Description	Verify that for B2B units for which freight is not applicable, no freight charges appear on checkout.				
+Step 1	Log in as a user from a B2B unit where freight is not applicable.	Login successful.			
+Step 2	Add products to the cart and proceed to checkout.	Checkout process should initiate successfully.			
+Step 3	Verify if freight charges appear in the order summary.	No freight charges should be displayed.			
+Reason	Freight charges are not applicable due to the value of the cart or an existing agreement.	
+
+Description	Verify that on the checkout, you can change the default shipping method.				
+Step 1	Log in as a user and add products to the cart.	Products are added successfully.			
+Step 2	Proceed to checkout and view the default shipping method.	The default shipping method is pre-selected.			
+Step 3	Attempt to change the shipping method from the available options.	The user should be able to select a different shipping method.			
+Step 4	Confirm the order and verify that the selected shipping method is applied.	The updated shipping method should be reflected in the order summary.
+
+Description	Verify that in Hybris, if a B2B unit has an applicable coupon on shipping, the shipping charge is removed or reduced.				
+Step 1	Log in as a user from a B2B unit that has a shipping discount coupon.	Login successful.			
+Step 2	Add products to the cart and proceed to checkout.	Checkout process should initiate successfully.			
+Step 3	Apply the applicable shipping discount coupon.	Coupon should be accepted and applied.			
+Step 4	Verify if the shipping charge is removed or reduced in the order summary.	Shipping charge should be adjusted as per the coupon terms.			
+Step 5	Confirm the order and check the final applied shipping charge.	The correct discounted shipping charge should be reflected.
+
