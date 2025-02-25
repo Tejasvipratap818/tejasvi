@@ -1,0 +1,258 @@
+Test Case 1: Verify Bill-To Address Selection During Checkout
+
+Test / Step
+
+Description
+
+Expected Result
+
+PASS/FAIL
+
+Comments
+
+Evidence
+
+1
+
+Navigate to checkout page as a B2B user with valid Sold-To and Bill-To information.
+
+Checkout page is accessible with both address fields.
+
+
+
+
+
+
+
+2
+
+Verify the availability of the Bill-To address dropdown.
+
+Bill-To address dropdown is displayed.
+
+
+
+
+
+
+
+3
+
+Check that the dropdown only displays addresses matching the B2BUnit country.
+
+Only valid Bill-To addresses for the user's country.
+
+
+
+
+
+
+
+4
+
+Ensure Bill-To field cannot be left empty.
+
+System does not allow proceeding without a selection.
+
+
+
+
+
+
+
+5
+
+Confirm the Bill-To address is correctly sent to middleware for processing.
+
+Bill-To address is captured and sent to middleware.
+
+
+
+
+
+
+
+6
+
+Verify this functionality is only available for FLC orders (Western Europe).
+
+Bill-To option does not appear for PSS & GSS orders.
+
+
+
+
+
+
+
+Test Case 2: Verify Promotion Data Automation from Hybris to SAP ECC
+
+Test / Step
+
+Description
+
+Expected Result
+
+PASS/FAIL
+
+Comments
+
+Evidence
+
+1
+
+Apply a valid promotion code during checkout.
+
+Promotion is successfully applied.
+
+
+
+
+
+
+
+2
+
+Complete the order and verify promotion data is sent to SAP ECC.
+
+Promotion details (code, discount) are transmitted.
+
+
+
+
+
+
+
+3
+
+Apply an invalid or expired promotion code.
+
+System displays error message and blocks promotion.
+
+
+
+
+
+
+
+4
+
+Validate orders with multiple line items and promotions.
+
+Each line item reflects the correct promotion.
+
+
+
+
+
+
+
+5
+
+Ensure Hybris syncs correctly with SAP ECC for promotion status (active/inactive).
+
+Only active promotions are allowed.
+
+
+
+
+
+
+
+6
+
+Check the behavior when the promotion code does not exist in SAP ECC.
+
+Order is flagged as failed with an appropriate error.
+
+
+
+
+
+
+
+Test Case 3: Verify Email Routing Based on Country and B2BUnit Setup
+
+Test / Step
+
+Description
+
+Expected Result
+
+PASS/FAIL
+
+Comments
+
+Evidence
+
+1
+
+Trigger a quote request for a Hillrom B2BUnit (PSS & GSS orders).
+
+Email is sent to the Hillrom-specific address.
+
+
+
+
+
+
+
+2
+
+Trigger a quote request for a WA B2BUnit (FLC orders).
+
+Email is sent to the WA-specific address.
+
+
+
+
+
+
+
+3
+
+Submit an order confirmation for both Hillrom and WA B2BUnits.
+
+Correct team receives the order confirmation email.
+
+
+
+
+
+
+
+4
+
+Verify repair request triggers the correct "Repair Request Email Address" field.
+
+Repair request is routed to the proper service team.
+
+
+
+
+
+
+
+5
+
+Ensure emails route correctly based on SAP ID (WA) and JDE ID (Hillrom).
+
+Emails are sent to the correct addresses.
+
+
+
+
+
+
+
+6
+
+Validate correct field mapping in Backoffice (Quote & Order Email and Repair Request Email).
+
+Proper fields are populated and used.
+
+
+
+
+
+
+
