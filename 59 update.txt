@@ -1,0 +1,107 @@
+Test Cases for Bill-To Address Selection and Promotion Automation
+
+Test Case ID
+
+Test Case Description
+
+Expected Outcome
+
+Actual Outcome
+
+Pass/Fail
+
+Comments
+
+TC_001
+
+Verify Bill-To Address Dropdown Display
+
+Bill-To address dropdown should be displayed during checkout for FLC orders (Western Europe only) and hidden for PSS & GSS orders.
+
+
+
+
+
+
+
+Step 1
+
+Login to the application
+
+User should be successfully logged in.
+
+
+
+
+
+
+
+Step 2
+
+Navigate to the checkout page with an FLC order
+
+Bill-To address dropdown should be visible.
+
+
+
+
+
+
+
+Step 3
+
+Navigate to the checkout page with a PSS/GSS order
+
+Bill-To address dropdown should NOT be visible.
+
+
+
+
+
+
+
+| TC_002 | Validate Bill-To Address Filtering by Country | Only Bill-To addresses matching the user's B2BUnit country should be displayed. | | | |
+| Step 1 | Login to the application | User should be successfully logged in. | | | |
+| Step 2 | Navigate to the checkout page with different B2BUnit country combinations | Bill-To addresses should be filtered by B2BUnit country. | | | |
+
+| TC_003 | Verify Default Bill-To ID in Backoffice | Ensure Bill-To ID is not empty and defaults to B2BUnit Sold-To ID. | | | |
+| Step 1 | Login to the Backoffice system | User should be successfully logged in. | | | |
+| Step 2 | Check Bill-To field for an FLC order | Bill-To ID should default to B2BUnit Sold-To ID and not be empty. | | | |
+
+| TC_004 | Validate Promotion Data Transfer to SAP ECC | Ensure promotion details (code, discount percentage, applicable items) are correctly sent to SAP ECC. | | | |
+| Step 1 | Login to the application | User should be successfully logged in. | | | |
+| Step 2 | Apply a valid promotion and place an order | Promotion details should be accurately transferred to SAP ECC without manual intervention. | | | |
+
+| TC_005 | Validate Promotion Code Existence in SAP ECC | System should validate promotion code existence before processing. | | | |
+| Step 1 | Login to the application | User should be successfully logged in. | | | |
+| Step 2 | Apply a promotion that does not exist in SAP ECC and place an order | System should flag the order as failed with an appropriate error message. | | | |
+
+| TC_006 | Handle Expired or Invalid Promotions | System should reject expired or invalid promotions with an error message. | | | |
+| Step 1 | Login to the application | User should be successfully logged in. | | | |
+| Step 2 | Apply an expired or invalid promotion in Hybris | System should display an appropriate error message and reject the promotion. | | | |
+
+| TC_007 | Validate Multiple Promotions on Same Order | Ensure each line item reflects the correct promotion discount. | | | |
+| Step 1 | Login to the application | User should be successfully logged in. | | | |
+| Step 2 | Apply multiple promotions across different line items and place an order | Each line item should reflect the correct promotion discount. | | | |
+
+| TC_008 | Validate Promotion Scope (Full Order vs Specific Items) | Ensure the correct discount calculation based on promotion scope. | | | |
+| Step 1 | Login to the application | User should be successfully logged in. | | | |
+| Step 2 | Apply a promotion for full order vs. specific items and place an order | System should calculate the discount correctly based on the promotion scope. | | | |
+
+| TC_009 | Synchronize Promotion Data Between Hybris and SAP ECC | Ensure Hybris reflects the current promotion status from SAP ECC. | | | |
+| Step 1 | Login to the application | User should be successfully logged in. | | | |
+| Step 2 | Activate/Deactivate a promotion in SAP ECC and attempt to apply it in Hybris | System should accept or reject the promotion based on its status in SAP ECC. | | | |
+
+| TC_010 | Verify Email Routing Based on Country and B2BUnit Setup | Ensure correct email routing for quotes and order confirmations. | | | |
+| Step 1 | Login to the application | User should be successfully logged in. | | | |
+| Step 2 | Submit a quote request for an FLC order (WA) | Quote email should be sent to WA team. | | | |
+| Step 3 | Submit a quote request for a PSS/GSS order (Hillrom) | Quote email should be sent to Hillrom team. | | | |
+
+| TC_011 | Validate Repair Request Email Routing | Ensure repair request emails are sent to the correct address based on configuration. | | | |
+| Step 1 | Login to the application | User should be successfully logged in. | | | |
+| Step 2 | Submit a repair request in Hybris | Email should be sent to the "Repair Request Email Address" configured in Backoffice. | | | |
+
+| TC_012 | Ensure Field Name Updates for Emails | Verify the renaming of the email fields in the Backoffice. | | | |
+| Step 1 | Login to the Backoffice system | User should be successfully logged in. | | | |
+| Step 2 | Check the Backoffice for renamed fields | "Quote & Order Email Address" should reflect quote requests and order confirmation emails. | | | |
+
