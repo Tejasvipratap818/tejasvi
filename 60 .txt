@@ -1,0 +1,24 @@
+| TC_001 | Verify Ship-To Address Search and Selection | Users should be able to search and select Ship-To addresses from the Hybris database | | | |
+| Step 1 | Login to the application | User should be successfully logged in | | | |
+| Step 2 | Navigate to the checkout page | Checkout page should be displayed | | | |
+| Step 3 | Click on the Ship-To address dropdown | Ship-To address selection dropdown should be visible | | | |
+| Step 4 | Search for a valid Ship-To address within B2BUnit country | Matching addresses from the Hybris database should be displayed | | | |
+| Step 5 | Select a valid Ship-To address | System should accept the selection and update the order details | | | |
+
+| TC_002 | Validate Country Restriction for Ship-To Address | Only Ship-To addresses within the user's B2BUnit country should be available for selection | | | |
+| Step 1 | Login to the application | User should be successfully logged in | | | |
+| Step 2 | Navigate to the checkout page | Checkout page should be displayed | | | |
+| Step 3 | Attempt to search for an address outside the B2BUnit country | System should not display any address outside the user's B2BUnit country | | | |
+
+| TC_003 | Verify Ship-To Address Recording in Hybris and SAP ECC | Selected Ship-To address should be correctly recorded in Hybris and SAP ECC | | | |
+| Step 1 | Login to the application | User should be successfully logged in | | | |
+| Step 2 | Navigate to the checkout page | Checkout page should be displayed | | | |
+| Step 3 | Select a Ship-To address and complete the order | Order should be processed successfully | | | |
+| Step 4 | Verify the order in Hybris and SAP ECC | Ship-To address should be accurately recorded in both systems | | | |
+
+| TC_004 | Validate "Contact Us" Link Display When No Address Found | If no relevant Ship-To address is found, users should see a link to the "Contact Us" page | | | |
+| Step 1 | Login to the application | User should be successfully logged in | | | |
+| Step 2 | Navigate to the checkout page | Checkout page should be displayed | | | |
+| Step 3 | Search for an invalid or non-existing Ship-To address | No matching address should be displayed | | | |
+| Step 4 | Verify the "Contact Us" link visibility | "Contact Us" hyperlink should be displayed for user assistance | | | |
+
