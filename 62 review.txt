@@ -23,3 +23,21 @@ Not allowed if you are logged in unless country has more languages
 
 Verify that non logged in users can manually select a different currency.		
 Not valid as you do not see the price for western europe					
+
+
+
+
+Description
+
+Allow users to select a Ship-To address that is not directly linked to their Sold-To account but exists in the Hybris database. The selection must be restricted to addresses within the user's B2BUnit country. This functionality will provide flexibility in address selection while maintaining regional limitations.
+
+
+Acceptance Criteria
+
+• Users can search and select Ship-To addresses from the Hybris database.
+
+• Only addresses within the user's B2BUnit country are available for selection.
+
+• Selected Ship-To addresses are correctly recorded for the order in Hybris and SAP ECC.
+
+• If no relevant address is found, users can get access to an hypertext link to the Contact Us page.
