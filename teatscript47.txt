@@ -1,0 +1,29 @@
+| TC_001 | Verify Promotion Data Transfer to SAP ECC | Ensure that promotion details from Hybris are correctly transferred to SAP ECC without manual intervention | | | |
+| Step 1 | Login to Hybris and initiate order creation | User should be able to access the order creation page | | | |
+| Step 2 | Apply a valid promotion during checkout | Promotion details (code, discount) should be successfully applied to the order | | | |
+| Step 3 | Complete the order and transmit to SAP ECC | Promotion details should be included in the transmitted order without any validation error | | | |
+
+| TC_002 | Validate Handling of Inactive Promotions | Ensure that orders fail if a promotion is inactive in SAP ECC | | | |
+| Step 1 | Login to Hybris and initiate order creation | User should be able to access the order creation page | | | |
+| Step 2 | Apply a promotion that is inactive in SAP ECC | Promotion should be applied without error on the Hybris side | | | |
+| Step 3 | Complete the order and transmit to SAP ECC | Order should be flagged as a failed order due to inactive promotion | | | |
+
+| TC_003 | Verify Multiple Promotions Handling | Ensure that multiple promotions on a single order are processed correctly in SAP ECC | | | |
+| Step 1 | Login to Hybris and initiate order creation | User should be able to access the order creation page | | | |
+| Step 2 | Apply multiple valid promotions during checkout | Each promotion should be successfully applied to corresponding line items | | | |
+| Step 3 | Complete the order and transmit to SAP ECC | Each line item should reflect the correct discount as per applied promotions | | | |
+
+| TC_004 | Verify Failed Order Handling and Manual Re-Trigger | Ensure failed orders due to promotion mismatch can be manually resolved and re-triggered | | | |
+| Step 1 | Login to Hybris and initiate order creation | User should be able to access the order creation page | | | |
+| Step 2 | Apply an inactive promotion and complete the order | Order should be flagged as failed in SAP ECC | | | |
+| Step 3 | Manually resolve the promotion issue in SAP ECC | Promotion mismatch should be corrected | | | |
+| Step 4 | Re-trigger the failed order manually | Order should be processed successfully without requiring customer re-submission | | | |
+
+| TC_005 | Validate Logging of Failed Orders | Ensure that failed orders due to promotion mismatches are logged for tracking | | | |
+| Step 1 | Apply an inactive promotion and complete the order | Order should be flagged as failed in SAP ECC | | | |
+| Step 2 | Check the system logs for the failed order | System logs should capture the reason for failure (promotion mismatch) | | | |
+
+| TC_006 | Validate No API Call for Promotion Validation | Ensure no real-time API validation occurs during order creation | | | |
+| Step 1 | Initiate an order creation and apply a promotion | Promotion should be applied without real-time API validation | | | |
+| Step 2 | Transmit the order to SAP ECC | Order should be processed without API checks during submission | | | |
+
