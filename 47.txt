@@ -1,0 +1,81 @@
+Currently, promotion activation is handled manually in both SAP ECC and Hybris. Orders will not be blocked at the time of entry, but if the promotion used in Hybris is no longer active in SAP ECC, the order will fail and be categorized under failed orders. The team will manually resolve and re-trigger the order. No API calls or validation will be implemented to restrict users from applying promotions at the order submission stage.
+
+Business Requirements:
+
+• Ensure that promotions applied in Hybris are correctly processed in SAP ECC.
+
+• If a promotion code used in Hybris is no longer active in SAP ECC, the order should fail and require manual intervention.
+
+
+
+• Maintain synchronization between Hybris and SAP ECC regarding active promotions.
+
+• Establish a manual re-triggering process for failed orders.
+
+
+Acceptance Criteria
+
+Promotion Data Transfer:
+
+Given a customer applies a promotion in Hybris,
+
+
+• When the order is transmitted to SAP ECC,
+
+
+• Then the promotion details must be included in the order, without manual validation & intervention.
+
+
+
+Handling Expired or Invalid Promotions:
+
+
+• Given a customer applies a promotion that is no longer active in SAP ECC,
+
+
+
+• When the order is processed in SAP ECC,
+
+
+• Then the order must be flagged as a failed order.
+
+• A manual process must allow reviewing and re-triggering the order.
+
+
+
+Multiple Promotions on the Same Order:
+
+
+
+• Given an order contains multiple line items with different promotions,
+
+
+• When the order is processed,
+
+
+• Then each line item must reflect the discount applied in Hybris.
+
+Failed Order Handling:
+
+
+• Given an order fails due to a promotion mismatch between Hybris and SAP ECC,
+
+
+• When the issue is resolved manually,
+
+• Then the order must be re-triggered without requiring a new submission from the customer.
+
+
+
+Technical Considerations:
+
+• No API validation will be implemented for promotion verification at order entry.
+
+
+
+• Failed orders due to promotion mismatches will require manual correction and reprocessing.
+
+• Middleware must map pricing fields correctly between Hybris and SAP ECC.
+
+• Logging mechanism required to track failed orders due to inactive promotions.
+
