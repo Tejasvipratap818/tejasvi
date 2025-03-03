@@ -250,6 +250,29 @@ Validate correct field mapping in Backoffice (Quote & Order Email and Repair Req
 
 Proper fields are populated and used.
 
+................ add update 
+
+| TC_001 | Validate Shipping Address Display | Ensure the correct shipping address is displayed on the checkout page. | | | |
+| Step 1 | Navigate to the checkout page | Shipping address should be displayed accurately. | | | |
+| Step 2 | Verify shipping address details | Address should match the saved shipping address (e.g., Liverpool, HOLMFIRTH, HD9 1AL, Great Britain). | | | |
+
+| TC_002 | Validate Billing Address Display | Ensure the correct billing address is displayed on the checkout page. | | | |
+| Step 1 | Navigate to the checkout page | Billing address should be displayed accurately. | | | |
+| Step 2 | Verify billing address details | Address should match the saved billing address (e.g., Isabella Martin, 8-10 E Ferry Rd, Millwall, E14 3BB, United Kingdom). | | | |
+
+| TC_003 | Validate Billing Address Selection | Ensure users can select a different billing address from saved addresses. | | | |
+| Step 1 | Click on "Select a different billing address" | Saved billing addresses should be displayed. | | | |
+| Step 2 | Choose a billing address and confirm | The selected billing address should be updated on the checkout page. | | | |
+
+| TC_004 | Validate Order Summary Details | Ensure order summary information is displayed correctly. | | | |
+| Step 1 | Navigate to the checkout page | Order summary should display product details, quantity, subtotal, and VAT. | | | |
+| Step 2 | Verify order item details | Item name (RING F. GRIFF), part number (S10499), and price (£10.00) should be accurate. | | | |
+| Step 3 | Validate VAT status | "Estimated VAT" should display as "TBD" when VAT is not yet calculated. | | | |
+
+
+
+
+
 
 
 
