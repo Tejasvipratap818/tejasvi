@@ -253,6 +253,16 @@ Proper fields are populated and used.
 
 
 
+TC_016 | Validate Saved Billing Address Usage | Ensure the user can select and apply saved billing addresses during checkout. | | | |
+| Step 1 | Login to the application | User should be successfully logged in. | | | |
+| Step 2 | Navigate to the checkout page | Saved billing addresses should be displayed. | | | |
+| Step 3 | Select a saved billing address | Selected billing address should be applied to the order. | | | |
+
+| TC_017 | Verify Use of New Billing Address | Ensure users can enter and apply a new billing address during checkout. | | | |
+| Step 1 | Login to the application | User should be successfully logged in. | | | |
+| Step 2 | Navigate to the checkout page | Option to enter a new billing address should be available. | | | |
+| Step 3 | Enter a new billing address and apply it | New billing address should be saved and applied successfully. | | | |
+
 
 
 
