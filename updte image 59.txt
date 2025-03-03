@@ -1,0 +1,107 @@
+est Case ID
+
+Test Case Description
+
+Expected Outcome
+
+Actual Outcome
+
+Pass/Fail
+
+Comments
+
+TC_001
+
+Verify Bill-To Address Dropdown Display
+
+Bill-To address dropdown should be displayed during checkout for FLC orders (Western Europe only) and hidden for PSS & GSS orders.
+
+
+
+
+
+
+
+Step 1
+
+Login to the application
+
+User should be successfully logged in.
+
+
+
+
+
+
+
+Step 2
+
+Navigate to the checkout page with an FLC order
+
+Bill-To address dropdown should be visible.
+
+
+
+
+
+
+
+Step 3
+
+Navigate to the checkout page with a PSS/GSS order
+
+Bill-To address dropdown should NOT be visible.
+
+
+
+
+
+
+
+| TC_002 | Validate Bill-To Address Filtering by Country | Only Bill-To addresses matching the user's B2BUnit country should be displayed. | | | |
+| Step 1 | Login to the application | User should be successfully logged in. | | | |
+| Step 2 | Navigate to the checkout page with different B2BUnit country combinations | Bill-To addresses should be filtered by B2BUnit country. | | | |
+
+| TC_003 | Verify Default Bill-To ID in Backoffice | Ensure Bill-To ID is not empty and defaults to B2BUnit Sold-To ID. | | | |
+| Step 1 | Login to the Backoffice system | User should be successfully logged in. | | | |
+| Step 2 | Check Bill-To field for an FLC order | Bill-To ID should default to B2BUnit Sold-To ID and not be empty. | | | |
+
+| TC_004 | Validate Manual Address Entry Restriction | Ensure users cannot manually enter Bill-To addresses. | | | |
+| Step 1 | Login to the application | User should be successfully logged in. | | | |
+| Step 2 | Attempt to manually enter a Bill-To address during checkout | System should not allow manual Bill-To address entry. | | | |
+
+| TC_005 | Verify Order Processing with Bill-To Address | Ensure the Bill-To address is correctly sent through the middleware for order processing. | | | |
+| Step 1 | Place an FLC order with a valid Bill-To address | Bill-To address should be correctly transmitted via middleware to SAP ECC. | | | |
+| Step 2 | Verify the order in SAP ECC | Bill-To address should match the selected address. | | | |
+
+| TC_006 | Validate Required Fields for Bill-To Address | Ensure all required fields (Sold-To ID, Bill-To IDs, Description, Street 1, Street 4, Street 5, City, Postal Code, Country) are present. | | | |
+| Step 1 | Login to the application | User should be successfully logged in. | | | |
+| Step 2 | Navigate to the checkout page with an FLC order | All required Bill-To address fields should be displayed and populated. | | | |
+
+| TC_007 | Verify Common Section for Ship-To and Bill-To Addresses | Ensure a combined section for Ship-To and Bill-To addresses is displayed for FLC orders. | | | |
+| Step 1 | Login to the application | User should be successfully logged in. | | | |
+| Step 2 | Navigate to the checkout page with an FLC order | Ship-To and Bill-To addresses should appear together in a common section. | | | |
+
+| TC_008 | Validate Missing Bill-To Address in Backoffice | Ensure an error occurs if Bill-To ID is missing in Backoffice. | | | |
+| Step 1 | Login to the Backoffice system | User should be successfully logged in. | | | |
+| Step 2 | Attempt to process an order without a Bill-To ID | System should display an error and block order processing. | | | |
+
+| TC_009 | Validate Address Selection and Persistence | Ensure address selection updates and persists correctly during checkout. | | | |
+| Step 1 | Click on "Select a different billing address" | Popup should open with available addresses. | | | |
+| Step 2 | Search and select a valid address | Only matching addresses should be displayed and selected. | | | |
+| Step 3 | Proceed with the selected address and click "Next" | Selected address should replace the old one and persist through checkout. | | | |
+
+| TC_010 | Validate Bill-To Address Data Synchronization | Ensure Bill-To address data is synced accurately between SAP ECC and the application. | | | |
+| Step 1 | Update a Bill-To address in SAP ECC | Updated Bill-To address should be reflected in the application. | | | |
+
+| TC_011 | Verify Bill-To Address Not Visible for PSS & GSS Orders | Ensure Bill-To selection does not appear for PSS and GSS orders. | | | |
+| Step 1 | Login to the application | User should be successfully logged in. | | | |
+| Step 2 | Navigate to the checkout page with a PSS or GSS order | Bill-To address dropdown should NOT be visible. | | | |
+
+| TC_012 | Validate Existing Shipping Address Functionality | Existing Shipping Address features should work as before. | | | |
+| Step 1 | Complete checkout with the default Shipping Address | Order should process successfully without errors. | | | |
+| Step 2 | Modify the Shipping Address and proceed | Address change should reflect correctly. | | | |
+
+| TC_013 | Validate Multi-Language Support for Bill-To Address Flow | Bill-To Address functionality should work in different languages. | | | |
+| Step 1 | Switch to different supported languages (e.g., French, German) | All labels and options should translate correctly. | | | |
+| Step 2 | Perform the Bill-To Address selection in each language | Functionality should remain consistent across languages. | | | |
