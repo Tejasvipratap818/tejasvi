@@ -1,0 +1,35 @@
+TC_001	Validate Bill to Address display	"Bill to Address" section should be displayed along with the "Shipping Address" section.
+Step 1	Navigate to the checkout page.	Both "Shipping Address" and "Bill to Address" sections should be visible.
+
+TC_002	Validate "Select a different billing address" option	Option to change billing address should be available.
+Step 1	Check the "Bill to Address" section.	"Select a different billing address" option should be displayed.
+
+TC_003	Validate popup on changing billing address	Clicking "Select a different billing address" should open a popup.
+Step 1	Click on "Select a different billing address".	A popup should open displaying saved billing addresses.
+
+TC_004	Validate search functionality in billing address popup	Search should work correctly within the billing address popup.
+Step 1	Enter a keyword in the search box.	Relevant addresses matching the keyword should be displayed.
+
+TC_005	Validate address selection from popup	New billing address should be selectable from the popup.
+Step 1	Click "Use this billing address" for a specific address.	Selected address should replace the current billing address.
+
+TC_006	Validate data saving on next step	Billing address changes should be saved on proceeding to the next step.
+Step 1	Select a different billing address and click "Next".	New address should be saved without overwriting other data.
+
+TC_007	Validate B2B country-based address filtering	Billing addresses should be filtered based on the B2B unit country.
+Step 1	Navigate to checkout with a UK B2B unit.	Only UK addresses should be visible in the popup.
+Step 2	Search for non-UK addresses (e.g., France).	Non-UK addresses should not appear in search results.
+Step 3	Confirm a valid UK address.	The selected UK address should replace the existing one.
+
+TC_008	Validate FLC unit behavior	Both Shipping and Bill to Address should be displayed for FLC units.
+Step 1	Navigate to checkout with an FLC unit.	Both addresses should be visible.
+
+TC_009	Validate PSS/GSS unit behavior	Only Shipping Address should be displayed for PSS/GSS units.
+Step 1	Navigate to checkout with a PSS or GSS unit.	Only the Shipping Address should be visible, "Bill to Address" should not appear.
+
+TC_010	Validate existing Shipping Address functionality	Existing Shipping Address functionality should remain unaffected.
+Step 1	Navigate to checkout and verify the Shipping Address.	Shipping Address should display correctly and function as before.
+
+TC_011	Validate multi-language support	"Bill to Address" and related text should be displayed correctly in different languages.
+Step 1	Change the language setting and navigate to checkout.	All labels and options should be displayed in the selected language.
+
