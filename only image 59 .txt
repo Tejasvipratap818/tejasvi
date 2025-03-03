@@ -1,0 +1,444 @@
+Bill-to Address Section |
+
+Test Case ID
+
+Test Case Description
+
+Expected Outcome
+
+Actual Outcome
+
+Pass/Fail
+
+Comments
+
+TC_001
+
+Validate Bill-to Address display
+
+Bill-to Address should display alongside the Shipping Address.
+
+
+
+
+
+
+
+Step 1
+
+Login to the application.
+
+User should be successfully logged in.
+
+
+
+
+
+
+
+Step 2
+
+Navigate to the checkout page.
+
+Checkout page should load correctly.
+
+
+
+
+
+
+
+Step 3
+
+Check if the Bill-to Address is displayed.
+
+Bill-to Address should be visible with Shipping Address.
+
+
+
+
+
+
+
+TC_002
+
+Validate Default Bill-to Address section
+
+A new section for Default Bill-to Address should be present.
+
+
+
+
+
+
+
+Step 1
+
+Navigate to the checkout page.
+
+Default Bill-to Address section should be visible.
+
+
+
+
+
+
+
+TC_003
+
+Validate "Select a different billing address" option
+
+Option should be available to select a different billing address.
+
+
+
+
+
+
+
+Step 1
+
+Check for the "Select a different billing address" option.
+
+Option should be present and clickable.
+
+
+
+
+
+
+
+| Popup Behavior |
+
+Test Case ID
+
+Test Case Description
+
+Expected Outcome
+
+Actual Outcome
+
+Pass/Fail
+
+Comments
+
+TC_004
+
+Validate popup opens on "Select a different billing address"
+
+Clicking on the option should open a popup.
+
+
+
+
+
+
+
+Step 1
+
+Click on "Select a different billing address".
+
+Popup should open with available addresses.
+
+
+
+
+
+
+
+TC_005
+
+Validate search functionality in popup
+
+Search should return matching addresses.
+
+
+
+
+
+
+
+Step 1
+
+Enter a search term in the popup.
+
+Only matching billing addresses should be displayed.
+
+
+
+
+
+
+
+TC_006
+
+Validate address selection and replacement
+
+Selected billing address should replace the old one.
+
+
+
+
+
+
+
+Step 1
+
+Select a different address and click "Use this billing address".
+
+The new address should replace the current one.
+
+
+
+
+
+
+
+TC_007
+
+Validate data persistence on "Next" click
+
+Address data should save without overwriting.
+
+
+
+
+
+
+
+Step 1
+
+Select an address and proceed by clicking "Next".
+
+Selected address should be saved without reverting.
+
+
+
+
+
+
+
+| Country-Based Filtering |
+
+Test Case ID
+
+Test Case Description
+
+Expected Outcome
+
+Actual Outcome
+
+Pass/Fail
+
+Comments
+
+TC_008
+
+Validate address filtering by B2B unit (UK)
+
+Only UK addresses should be displayed for UK B2B units.
+
+
+
+
+
+
+
+Step 1
+
+Navigate to checkout with a UK B2B unit.
+
+Only UK addresses should be visible in the popup.
+
+
+
+
+
+
+
+Step 2
+
+Search for non-UK addresses (e.g., France).
+
+Non-UK addresses should not appear in search results.
+
+
+
+
+
+
+
+Step 3
+
+Confirm a valid UK address.
+
+The selected UK address should replace the existing one.
+
+
+
+
+
+
+
+| FLC, PSS, GSS Behavior |
+
+Test Case ID
+
+Test Case Description
+
+Expected Outcome
+
+Actual Outcome
+
+Pass/Fail
+
+Comments
+
+TC_009
+
+Validate address visibility for FLC orders
+
+Both Shipping and Bill-to Addresses should be visible.
+
+
+
+
+
+
+
+Step 1
+
+Navigate to checkout with an FLC order.
+
+Both address sections should be displayed.
+
+
+
+
+
+
+
+TC_010
+
+Validate address visibility for PSS/GSS orders
+
+Only Shipping Address should be visible (no Bill-to Address).
+
+
+
+
+
+
+
+Step 1
+
+Navigate to checkout with a PSS/GSS order.
+
+Bill-to Address section should be hidden.
+
+
+
+
+
+
+
+| Existing Functionality |
+
+Test Case ID
+
+Test Case Description
+
+Expected Outcome
+
+Actual Outcome
+
+Pass/Fail
+
+Comments
+
+TC_011
+
+Validate existing Shipping Address functionality
+
+Existing Shipping Address features should work as before.
+
+
+
+
+
+
+
+Step 1
+
+Complete checkout with the default Shipping Address.
+
+Order should process successfully without errors.
+
+
+
+
+
+
+
+Step 2
+
+Modify the Shipping Address and proceed.
+
+Address change should reflect correctly.
+
+
+
+
+
+
+
+| Language Support |
+
+Test Case ID
+
+Test Case Description
+
+Expected Outcome
+
+Actual Outcome
+
+Pass/Fail
+
+Comments
+
+TC_012
+
+Validate multi-language support for Bill-to Address flow
+
+Bill-to Address functionality should work in different languages.
+
+
+
+
+
+
+
+Step 1
+
+Switch to different supported languages (e.g., French, German).
+
+All labels and options should translate correctly.
+
+
+
+
+
+
+
+Step 2
+
+Perform the Bill-to Address selection in each language.
+
+Functionality should remain consistent across languages.
+
+
+
+
+
+
+
