@@ -26,3 +26,10 @@ TC_001 | Verify Promotion Data Transfer to SAP ECC | Ensure that promotion detai
 | TC_006 | Validate No API Call for Promotion Validation | Ensure no real-time API validation occurs during order creation | | | |
 | Step 1 | Initiate an order creation and apply a promotion | Promotion should be applied without real-time API validation | | | |
 | Step 2 | Transmit the order to SAP ECC | Order should be processed without API checks during submission | | | |
+
+4 step2 ......
+1. Order Status: Order should be flagged as failed in Hybris and SAP ECC.
+2. Failure Handling:
+- The order will be stuck in the failed order list in Hybris.
+- SAP ECC will generate a failure message and send it to middleware.
+- Middleware will send a failed flag and trigger an email notification to the SME for manual intervention.
