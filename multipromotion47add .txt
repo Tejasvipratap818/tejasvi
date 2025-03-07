@@ -1,0 +1,40 @@
+ TC_007 | Validate Multiple Promotions on a Single Product | Ensure multiple promotions (e.g., percentage discount + free shipping) can be applied to a single product correctly | | | |
+| Step 1 | Login to Hybris and initiate order creation | User should be able to access the order creation page | | | |
+| Step 2 | Add a product to the cart and apply multiple valid promotions | All applicable promotions should be applied without conflict | | | |
+| Step 3 | Complete the order and transmit to SAP ECC | All promotions should be accurately reflected in the transmitted order | | | |
+
+| TC_008 | Validate Conflicting Promotions on a Single Product | Ensure the system applies the highest priority promotion when conflicts arise | | | |
+| Step 1 | Login to Hybris and initiate order creation | User should be able to access the order creation page | | | |
+| Step 2 | Add a product to the cart and apply two conflicting promotions | System should apply only one promotion based on priority or maximum benefit | | | |
+| Step 3 | Complete the order and transmit to SAP ECC | Only the correct promotion should be included in the transmitted order | | | |
+
+| TC_009 | Validate Multiple Products with Individual Promotions | Ensure that different products can have different promotions in a single order | | | |
+| Step 1 | Login to Hybris and initiate order creation | User should be able to access the order creation page | | | |
+| Step 2 | Add multiple products to the cart and apply separate promotions to each | Each product should reflect the correct promotion | | | |
+| Step 3 | Complete the order and transmit to SAP ECC | Promotion details for each product should be accurately reflected in the transmitted order | | | |
+
+| TC_010 | Validate Multiple Promotions on Multiple Products | Ensure multiple promotions can be applied across different products in the same order | | | |
+| Step 1 | Login to Hybris and initiate order creation | User should be able to access the order creation page | | | |
+| Step 2 | Add multiple products to the cart and apply different promotions to each | Each product should receive the appropriate promotion | | | |
+| Step 3 | Complete the order and transmit to SAP ECC | Each promotion should be reflected accurately for the respective product | | | |
+
+| TC_011 | Validate Promotion Limit Per Product | Ensure that the system enforces the maximum number of promotions per product | | | |
+| Step 1 | Login to Hybris and initiate order creation | User should be able to access the order creation page | | | |
+| Step 2 | Add a product to the cart and attempt to apply more than the allowed number of promotions | System should restrict the application of excess promotions | | | |
+| Step 3 | Complete the order and transmit to SAP ECC | Only the allowed promotions should be reflected in the transmitted order | | | |
+
+| TC_012 | Validate Cart-Level and Product-Level Promotion Combination | Ensure cart-level and product-level promotions are applied correctly together | | | |
+| Step 1 | Login to Hybris and initiate order creation | User should be able to access the order creation page | | | |
+| Step 2 | Apply both a cart-wide promotion and a product-specific promotion | Both promotions should apply if eligible without conflict | | | |
+| Step 3 | Complete the order and transmit to SAP ECC | Both promotions should be reflected correctly in the transmitted order | | | |
+
+| TC_013 | Validate Expired/Inactive Promotions Handling | Ensure inactive promotions are not applied during order creation | | | |
+| Step 1 | Login to Hybris and initiate order creation | User should be able to access the order creation page | | | |
+| Step 2 | Add a product to the cart and attempt to apply an inactive promotion | System should not allow the application of inactive promotions | | | |
+| Step 3 | Complete the order and transmit to SAP ECC | Inactive promotions should not be included in the transmitted order | | | |
+
+| TC_014 | Validate Multiple Promotions with Usage Limits | Ensure promotions with usage limits are enforced correctly when combined | | | |
+| Step 1 | Login to Hybris and initiate order creation | User should be able to access the order creation page | | | |
+| Step 2 | Apply promotions that have a usage limit | Promotions should apply only if within the allowed usage limit | | | |
+| Step 3 | Complete the order and transmit to SAP ECC | Only eligible promotions should be reflected in the transmitted order | | | |
+
