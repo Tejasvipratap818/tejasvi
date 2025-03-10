@@ -1,0 +1,41 @@
+Description
+
+As a customer, I want the ability to reorder products directly from my Order History page, so I can quickly repurchase items without manually adding them to my cart.
+
+Acceptance Criteria
+
+UI/UX Requirements:
+
+• A "Reorder" button is visible in the Order History page.
+
+• Clicking the button will:
+
+1) Add all products from the selected order to the cart.
+
+2) Display a confirmation message: "Your items have been added to the cart."
+
+3) If any product is out of stock or discontinued:
+
+Display a notification: "Some items are unavailable and were not added to the cart."
+
+List the unavailable products
+
+Behavior:
+
+• Products from the selected order are added to the cart with the same quantities as the original order.
+
+• Any discounts, pricing, or promotions applied will reflect the current system rules, not the original order's conditions.
+
+Backend Integration:
+
+• Pull order data from the database to populate the reorder functionality.
+
+• Validate product availability and stock levels in real-time before adding items to the cart.
+
+Error Handling:
+
+• If the order contains invalid or inactive products:
+
+• Notify the user: "Some products in this order cannot be reordered. Please contact support if required."
+
+• Ensure the system does not add duplicate products to the cart.
