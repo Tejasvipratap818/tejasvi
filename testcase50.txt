@@ -1,0 +1,31 @@
+| TC_001 | Verify "Reorder" Button Visibility | Ensure the "Reorder" button is visible on the Order History page | | | |
+| Step 1 | Login to Hybris and navigate to the Order History page | "Reorder" button should be visible next to each eligible order | | | |
+
+| TC_002 | Validate Product Addition via "Reorder" Button | Ensure clicking the "Reorder" button adds all products from the selected order to the cart | | | |
+| Step 1 | Click on the "Reorder" button for an order | All products from the selected order should be added to the cart with the same quantities | | | |
+| Step 2 | Verify confirmation message | "Your items have been added to the cart." message should be displayed | | | |
+
+| TC_003 | Handle Out-of-Stock or Discontinued Products | Ensure proper handling and messaging when products are unavailable | | | |
+| Step 1 | Click on the "Reorder" button for an order containing out-of-stock or discontinued products | System should add available products to the cart | | | |
+| Step 2 | Verify notification message | "Some items are unavailable and were not added to the cart." message should be displayed along with the list of unavailable products | | | |
+
+| TC_004 | Validate Quantity Consistency | Ensure products are added to the cart with the same quantities as the original order | | | |
+| Step 1 | Click the "Reorder" button on an order with multiple quantities of products | Each product should be added to the cart with the same quantity as in the original order | | | |
+
+| TC_005 | Apply Current Promotions and Pricing | Ensure the system applies current promotions and prices, not the original order's conditions | | | |
+| Step 1 | Click the "Reorder" button on a past order with outdated promotions | Cart should reflect the latest prices and applicable promotions | | | |
+
+| TC_006 | Backend Data Validation | Ensure product details are fetched from the database accurately for reorder | | | |
+| Step 1 | Click the "Reorder" button | System should pull the correct product information (ID, name, price, stock) from the database | | | |
+
+| TC_007 | Real-Time Stock Validation | Ensure product availability is checked in real-time before adding to the cart | | | |
+| Step 1 | Click "Reorder" on an order with products that recently went out of stock | System should validate stock levels in real-time before adding products to the cart | | | |
+
+| TC_008 | Handle Invalid or Inactive Products | Ensure the system handles and notifies about invalid or inactive products | | | |
+| Step 1 | Click "Reorder" on an order with inactive products | System should not add invalid or inactive products to the cart | | | |
+| Step 2 | Verify error message | "Some products in this order cannot be reordered. Please contact support if required." message should be displayed | | | |
+
+| TC_009 | Prevent Duplicate Product Addition | Ensure the system does not add duplicate products to the cart | | | |
+| Step 1 | Add a product to the cart manually | Product should be in the cart | | | |
+| Step 2 | Click "Reorder" on an order containing the same product | System should not add duplicate items; quantity should update if applicable | | | |
+
