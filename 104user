@@ -1,0 +1,26 @@
+Description
+
+Restrict the addition of PSS/GSS products to the cart when an FLC product is already present, and vice versa. If a user attempts to mix products with different Product Availability Groups (PAGs), display a popup message to prevent checkout.
+
+The logic should be aligned with Story CPP-1012, which already applies a similar restriction for Liko Slings vs. other products.
+
+As a user, when I add a product with Product availability group = WA1 to my cart, I should only be able to add other WA1 products.
+
+If I attempt to add a PSS or GSS product, I should receive a popup message explaining that mixed carts are not allowed: "You cannot mix Welch Allyn products with other product categories. Please complete your order separately."
+
+The same restriction applies vice versa (if a PSS/GSS product is already in the cart, an FLC product cannot be added).
+
+Acceptance Criteria
+
+• If a user adds an FLC product (WA1) to the cart, the system should only allow additional WA1 products to be added.
+
+• If a user tries to add a PSS/GSS product while an FLC product is in the cart, the system should block the action and display a popup message.
+
+• If a user adds a PSS/GSS product first, the system should prevent the addition of FLC products. The system should block the action and display a popup message.
+
+• The popup message should inform the user about the restriction.
+
+• Ensure the same logic as CPP-1012 is applied for consistency.
+
+• When a user tries to add a mix of PSS/GSS and FLC products to cart from the quick order page then it should be restricted and a pop-up should appear on the quick order page
+
