@@ -1,0 +1,73 @@
+Description
+
+=== Functionnality already exists in the UCAN parts store ===
+
+To enhance flexibility for users who cannot find their desired Ship-To address in the pre-filled list, we will introduce a manual Ship-To address entry option. Users will be able to click a link to reveal a form where they can input their shipping details. Once entered, these details will be transferred to SAP ECC in the appropriate fields using a dedicated dummy Ship-To account specifically created for web orders.
+
+Currently, users can only select a Ship-To address from predefined options linked to their Sold-To account. This creates issues when:
+
+• The desired Ship-To address is not listed.
+
+• Users need to ship to a new location that is not yet registered in our database.
+
+To solve this, we will:
+
+• Add a clickable link: "Click here to enter your shipping address manually." Show Expand/collapse after the sentence
+
+• Reveal a manual input form with the following fields
+
+Mandatory Fields:
+
+Establishment Name
+
+Country (auto-filled based on user location from B2BUnit Country field)
+
+Postal Code (validated format per country, find attached the postal code format mapping)
+
+City (dropdown suggestions based on postal code)
+
+Street
+
+Phone Number
+
+Optional Fields:
+
+Attention To
+
+Delivery Instructions
+
+Ensure that orders placed using manual address entry are linked to a unique dummy Ship-To account in SAP ECC: (created by Kristy)
+
+• Allow users to collapse the form to return to the initial address selection view.
+
+• If users go back, reset the manually entered values to prevent incorrect submissions.
+
+• Ensure all fields are mapped correctly to SAP ECC to prevent data loss or incorrect order processing.
+
+• Restrict this functionality to FLC Western Europe (WE) orders only at this stage.
+
+Acceptance Criteria
+
+• A clickable link lets users access the manual address entry form.
+
+• The form displays mandatory and optional fields as outlined.
+
+• The form enforces postal code format validation based on the user's country.
+
+• City suggestions are auto-populated based on the postal code.
+
+• Users can collapse the form to return to the initial address selection view.
+
+• If the user has entered the address manually but not saved it then on clicking collapse the details entered should get cleared
+
+If a user goes back, manually entered values are cleared.
+
+On entering address manually and not saving it, if user goes to a different section on the same page, then the data should be cleared
+
+• On entering address manually and not saving it, if user goes to a different page, then the data should be cleared
+
+• Entered addresses are transferred to SAP ECC with proper field mapping.
+
+• Orders placed with a manually entered address are linked to a unique dummy Ship-To account in SAP ECC.
+
+• This functionality is only enabled for FLC Western Europe orders.
