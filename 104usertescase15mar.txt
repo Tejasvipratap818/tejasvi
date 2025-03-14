@@ -1,0 +1,24 @@
+| TC_001 | Verify Addition of Same PAG Products | Ensure that only products with the same Product Availability Group (PAG) can be added to the cart | | | |
+| Step 1 | Add an FLC (WA1) product to the cart | Product should be successfully added to the cart | | | |
+| Step 2 | Add another FLC (WA1) product to the cart | Second product should be successfully added | | | |
+
+| TC_002 | Restrict Mixing of PSS/GSS with FLC Products | Ensure that PSS/GSS products cannot be added if an FLC product is already present | | | |
+| Step 1 | Add an FLC (WA1) product to the cart | Product should be successfully added to the cart | | | |
+| Step 2 | Attempt to add a PSS or GSS product | System should block the addition and show a popup: "You cannot mix Welch Allyn products with other product categories. Please complete your order separately." | | | |
+
+| TC_003 | Restrict Mixing of FLC with PSS/GSS Products | Ensure that FLC products cannot be added if a PSS/GSS product is already present | | | |
+| Step 1 | Add a PSS or GSS product to the cart | Product should be successfully added to the cart | | | |
+| Step 2 | Attempt to add an FLC (WA1) product | System should block the addition and show a popup: "You cannot mix Welch Allyn products with other product categories. Please complete your order separately." | | | |
+
+| TC_004 | Validate Popup Message Display | Ensure the correct popup message appears when mixed products are added | | | |
+| Step 1 | Add an FLC (WA1) product to the cart | Product should be successfully added to the cart | | | |
+| Step 2 | Attempt to add a PSS/GSS product | System should block the addition and display the correct popup message | | | |
+
+| TC_005 | Validate Restriction on Quick Order Page | Ensure mixed PAG products cannot be added via Quick Order Page | | | |
+| Step 1 | Add an FLC (WA1) product through the Quick Order Page | Product should be successfully added | | | |
+| Step 2 | Attempt to add a PSS/GSS product via Quick Order Page | System should block the addition and display a popup message | | | |
+
+| TC_006 | Ensure Consistency with CPP-1012 Logic | Validate that the logic aligns with Story CPP-1012 | | | |
+| Step 1 | Add an FLC (WA1) product to the cart | Product should be successfully added | | | |
+| Step 2 | Attempt to add a product from a different availability group | System should block the addition as per the CPP-1012 restriction logic | | | |
+
