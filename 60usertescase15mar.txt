@@ -1,0 +1,39 @@
+| TC_001 | Verify Manual Ship-To Address Form Visibility | Ensure the manual address entry form is accessible via a clickable link | | | |
+| Step 1 | Navigate to the checkout page with FLC Western Europe order | User should see the "Click here to enter your shipping address manually" link | | | |
+| Step 2 | Click on the manual address link | Manual address form should expand and display all required fields | | | |
+
+| TC_002 | Validate Mandatory Field Inputs | Ensure all mandatory fields must be filled before proceeding | | | |
+| Step 1 | Open the manual address form | Manual address form should be displayed | | | |
+| Step 2 | Leave mandatory fields empty and try to proceed | System should prevent proceeding and display validation messages for empty fields | | | |
+
+| TC_003 | Verify Postal Code Validation | Ensure postal code follows the country-specific format | | | |
+| Step 1 | Enter an invalid postal code format based on the selected country | System should display an error message for invalid postal code format | | | |
+| Step 2 | Enter a valid postal code | System should accept the input without errors | | | |
+
+| TC_004 | Validate City Auto-Suggestion | Ensure city suggestions populate based on the postal code | | | |
+| Step 1 | Enter a valid postal code in the manual form | City dropdown should display relevant suggestions based on the postal code | | | |
+
+| TC_005 | Verify Form Collapse and Data Reset | Ensure that collapsing the form clears the manually entered values | | | |
+| Step 1 | Enter data in all fields of the manual form | Data should be entered successfully | | | |
+| Step 2 | Collapse the manual address form | All entered data should be cleared | | | |
+
+| TC_006 | Validate Navigation Data Reset (Same Page) | Ensure that navigating to another section on the same page clears manual data | | | |
+| Step 1 | Enter data in all fields of the manual form | Data should be entered successfully | | | |
+| Step 2 | Navigate to a different section on the same page | Data in the manual form should be cleared | | | |
+
+| TC_007 | Validate Navigation Data Reset (Different Page) | Ensure that navigating to another page clears manual data | | | |
+| Step 1 | Enter data in all fields of the manual form | Data should be entered successfully | | | |
+| Step 2 | Navigate to a different page and return to checkout | Manual address form should be empty | | | |
+
+| TC_008 | Verify Data Mapping to SAP ECC | Ensure manual address data is correctly mapped to SAP ECC | | | |
+| Step 1 | Enter valid manual address details and place an order | Order should be placed successfully | | | |
+| Step 2 | Verify the SAP ECC entry for the order | Manual address should be mapped to the correct dummy Ship-To account | | | |
+
+| TC_009 | Validate FLC Western Europe Restriction | Ensure manual address entry is restricted to FLC Western Europe orders only | | | |
+| Step 1 | Initiate a PSS or GSS order and navigate to checkout | Manual address entry option should NOT be visible | | | |
+| Step 2 | Initiate an FLC Western Europe order and navigate to checkout | Manual address entry option should be visible | | | |
+
+| TC_010 | Verify Error Message for Invalid Phone Number | Ensure phone number validation works correctly | | | |
+| Step 1 | Enter an invalid phone number in the manual form | System should display an error message for invalid phone format | | | |
+| Step 2 | Enter a valid phone number | System should accept the input without errors | | | |
+
