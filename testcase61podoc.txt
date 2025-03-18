@@ -1,0 +1,394 @@
+TC 001
+
+Verify PO Upload functionality is present for EMEA Speciifc countries only
+
+System should show an option to upload PO document for EMEA specific country storefronts
+
+Step 1
+
+Login as a customer/distributor to an EMEA region specifc country storefront and create an FLC order
+
+System should recognize order type as FLC
+
+Step 2
+
+Navigate to the checkout page once order is created
+
+Screen should display an option to Upload PO Document
+
+Step 3
+
+Login as a customer/distributor to an EMEA region specifc country storefront and create an PSS/GSS order
+
+System should recognize order type as PSS/GSS
+
+Step 4
+
+Navigate to the checkout page once order is created
+
+Screen should display an option to Upload PO Document
+
+Step 5
+
+Login as a customer/distributor to US/Canada storefront and create an FLC order
+
+System should recognize order type as FLC
+
+Step 6
+
+Navigate to the checkout page once order is created
+
+Screen should not display any option to Upload PO Document
+
+Step 7
+
+Login as a customer/distributor to US/Canada storefront and create an GSS/PSS order
+
+System should recognize order type as PSS/GSS
+
+Step 8
+
+Navigate to the checkout page once order is created
+
+Screen should not display any option to Upload PO Document
+
+TC 002
+
+
+Verify that only Customers and Distributors are able to upload PO Document
+
+System should show an option to upload PO document for Customer and Distributor user profiles only
+
+Step 1
+
+Login as a customer/distributor to an EMEA region specifc country storefront and create an FLC Order
+
+System should recognize order type as FLC and B2B unit in Backoffice should not be equal to Internal
+
+
+Step 2
+
+Navigate to the checkout page once order is created
+
+Screen should display an option to Upload PO Document
+
+
+
+Step 3
+
+
+
+Login as a Student/Employee to an EMEA region specifc country storefront and create an FLC Order
+
+System should recognize order type as FLC and B2B unit in Backoffice should be equal to Internal
+
+Step 4
+
+Navigate to the checkout page once order is created
+
+Screen should not display an option to Upload PO Document
+
+TC_003
+
+Verify Mandatory PO Upload for FLC Orders
+
+System should not allow proceeding to the next step without a PO document for FLC orders
+
+Step 1
+
+Start checkout process with an FLC order
+
+System should recognize order type as FLC
+
+Step 2
+
+On the checkout page, see the standard instruction
+
+
+System will display a standard instruction for FLC Order
+
+"Please attach your PO document to proceed (Required) Uploading a PO document is mandatory for FLC//Welch Allen products"
+
+Step 3
+
+Attempt to proceed without uploading PO document
+
+
+System should display an error "Uploading a PO document is mandatory for FLC orders. Please attach your PO document to proceed." and prevent progression
+
+Step 4
+
+Upload a valid PO document and retry
+
+System should accept the document and allow proceeding to the next step
+
+TC_004
+
+Verify Optional PO Upload for PSS/GSS Orders
+
+Users should be able to proceed with checkout without uploading a PO document for PSS/GSS orders
+
+
+
+Step 1
+
+Start checkout process with a PSS/GSS order
+
+System should recognize order type as PSS/GSS
+
+System will display a standard instruction for PSS/GSS order
+
+"Please attach your PO document to proceed (Option)
+
+
+
+Step 2
+
+On the checkout page, see the standard instruction
+
+
+
+System will ensure that "Uploading a PO document is mandatory for FLC//Welch Allen products" is not visible for PSS/GSS orders
+
+
+Step 3
+
+Attempt to proceed without uploading PO document
+
+System should allow proceeding without any error message appearing
+
+Step 4
+
+Upload a valid PO document and proceed
+
+System should store the document and allow checkout
+
+TC_005
+
+B
+
+Validate File Upload Restrictions
+
+System should allow only one file upload, max 10MB size and all the formats should be acceptable
+
+27
+
+Create a FLC/GSS/PSS order and on the checkout page, verify if standard instruction is available
+
+On the checkout page, system should display standard instruction visisble at all times ""Maximum file size allowed: 10MB"
+
+Step 2
+
+Attempt to upload multiple files
+
+System should restrict to one file only
+
+28
+
+Step 3
+
+Attempt to upload a file larger than 10MB
+
+System should display an error message "Maximum file size allowed: 10MB" and reject the file
+
+29
+
+Step 4
+
+Attempt to upload an unsupported file format
+
+System should not display the uploaded file and it should fail
+
+Step 5
+
+Upload a valid PO document of acceptable format i.e PDF, JPEG etc and within 10 MB size
+
+System should accept the file and store it successfully in Backoffice at the order level
+
+TC_006
+
+Validate PO Document Storage and Retrieval
+
+Uploaded PO documents should be stored in Hybris and linked to the order
+
+
+Step 1
+
+Upload a PO document during checkout
+
+System should successfully save the document
+
+
+
+Step 2
+
+Complete the checkout process
+
+System should link the PO document to the order in the Backoffice
+
+TC_007
+
+Verify Cross-Browser & Device Compatibility
+
+PO upload feature should work across all browsers and devices
+
+Step 1
+
+Perform checkout on Chrome, Firefox, Edge, Safari
+
+Feature should function consistently
+
+Step 2
+
+Perform checkout on mobile devices (iOS & Android)
+
+Feature should function consistently
+
+
+Step 3
+
+Verify responsiveness of upload Ul
+
+Ul should be properly displayed on all devices
+
+TC_008
+
+Validate Order Type Differentiation Logic
+
+System should correctly differentiate FLC vs. PSS/GSS orders for PO upload requirements
+
+
+Step 1
+
+Create an FLC order and verify system classification
+
+System should correctly identify it as FLC
+
+
+
+Step 2
+
+Create a PSS/GSS order and verify system classification
+
+System should correctly identify it as PSS/GSS
+
+
+
+Step 3
+
+Ensure PO document requirements apply correctly based on order type
+
+Mandatory for FLC, optional for PSS/GSS
+
+
+
+TC_009
+
+Verify Upload of a File less than 10MB
+
+System should accept a file that is less than 10MB
+
+
+
+Step 1
+
+Upload a PO document with a file size less than 10MB
+
+System should accept the file without errors
+
+
+
+TC_010
+
+Verify Upload of a File Exactly 10MB
+
+System should accept a file that is exactly 10MB
+
+
+Step 1
+
+Upload a PO document with a file size of exactly 10MB
+
+System should accept the file without errors
+
+TC_011
+
+Verify Upload of a File Slightly Above 10MB
+
+System should reject files slightly larger than 10MB
+
+
+
+Step 1
+
+Attempt to upload a PO document with a size of 10.1MB
+
+System should display an error message and reject the file
+
+
+TC_012
+
+Verify Upload of a File Far Above 10MB
+
+System should reject files significantly larger than 10MB
+
+
+
+Step 1
+
+Attempt to upload a PO document with a size of 15MB
+
+System should display an error message and reject the file
+
+ TC_013
+
+Verify Upload of a File in accepted format
+
+System should accept a file
+
+
+
+Step 1
+
+Upload a PO document with file format PDF/JPEG/PNG etc
+
+System should accept the file without errors
+
+TC 014
+
+Verify restrictions on uploading more than one document
+
+System should allow the user to upload only one valid file and disable the button once the file is uploaded to restrict user from uploading another file without deletiong the first one
+
+
+
+Step 1
+
+
+On the checkout page, click on select to upload a valid PO document
+
+System should allow successful upload provided all the conditions are met
+
+Step 2
+
+
+
+Check the 'Select' button
+
+As one file is uploaded, system should disable the 'Select' button
+
+Step 3
+
+Delete the uploaded file by clciking on the iconm
+
+System will remove the file uploaded and the'Select' button should be enabled again
+
+
+
+Step 4
+
+
+
+Click on 'select' again to upload a new PO file with different file format and size than the first one
+
+System should successfully upload the document provided all the conditions are met
