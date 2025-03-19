@@ -1,0 +1,43 @@
+| TC_001 | Verify Manual Ship-To Address Form Visibility | Ensure the manual address entry form is accessible via a clickable link | | | |
+| Step 1 | Navigate to the checkout page with FLC Western Europe order | User should see the "Expand Form" link below the Ship-To Address section | | | |
+| Step 2 | Click on the "Expand Form" link | Manual address form should expand and display all required and optional fields along with 'Attention to' fields | | | |
+
+| TC_002 | Verify Collapsing of Manual Address Form | Ensure the manual address entry form collapses when clicking on "Collapse Form" | | | |
+| Step 1 | Expand the manual address form by clicking "Expand Form" | Form should be visible with all required and optional fields | | | |
+| Step 2 | Click on "Collapse Form" | Only the additional fields added as part of the form should disappear. 'Attention to' fields should remain visible | | | |
+
+| TC_003 | Verify Country Field Auto-Population | Ensure the country field is auto-populated based on the B2B Unit and not editable | | | |
+| Step 1 | Expand the manual address form | The country field should be auto-populated based on the user's default B2B unit | | | |
+| Step 2 | Try to edit the country field | User should not be able to modify the country field | | | |
+
+| TC_004 | Verify Postal Code Validation | Ensure postal code follows country-specific format | | | |
+| Step 1 | Enter an incorrect postal code format for the selected country | System should display an error message "Your zip code is incorrect. Please follow this format" | | | |
+| Step 2 | Enter a valid postal code as per format | Postal code should be accepted without errors | | | |
+
+| TC_005 | Verify Address Data Reset on Collapsing Form | Ensure that address data entered is reset when the form is collapsed | | | |
+| Step 1 | Expand the manual address form and enter address details | User should be able to enter data | | | |
+| Step 2 | Click on "Collapse Form" without saving the address | The manually entered address should be cleared | | | |
+
+| TC_006 | Verify Address Data Persistence After Saving | Ensure that the manually entered address is retained after saving | | | |
+| Step 1 | Expand the manual address form and enter address details | User should be able to enter data | | | |
+| Step 2 | Save the entered address | Entered details should be saved and remain visible | | | |
+
+| TC_007 | Verify Address Reset on Page Navigation | Ensure manually entered address data is reset when navigating away without saving | | | |
+| Step 1 | Enter address manually but do not save | User should enter data but not save it | | | |
+| Step 2 | Navigate to another section of the checkout page | Data should be cleared | | | |
+| Step 3 | Navigate back to the address section | The form should be empty | | | |
+
+| TC_008 | Verify Address Reset on Page Reload | Ensure manually entered address is cleared on page reload | | | |
+| Step 1 | Enter address manually but do not save | User should enter data but not save it | | | |
+| Step 2 | Refresh the checkout page | Data should be cleared | | | |
+| Step 3 | Expand the form again | The form should be empty | | | |
+
+| TC_009 | Verify Data Transfer to SAP ECC | Ensure manually entered address is correctly mapped in SAP ECC | | | |
+| Step 1 | Enter and save manual address details | Data should be saved successfully | | | |
+| Step 2 | Place an order with the manual address | Order should be processed successfully | | | |
+| Step 3 | Verify the address in SAP ECC | Address should be mapped correctly under the dedicated dummy Ship-To account | | | |
+
+| TC_010 | Verify Functionality Restriction to FLC Western Europe Orders | Ensure manual address entry is only available for FLC Western Europe orders | | | |
+| Step 1 | Navigate to checkout with an FLC Western Europe order | Manual address entry form should be available | | | |
+| Step 2 | Navigate to checkout with a non-FLC Western Europe order | Manual address entry form should NOT be available | | | |
+
