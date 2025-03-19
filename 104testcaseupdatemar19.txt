@@ -1,0 +1,57 @@
+Test Case ID
+
+Scenario
+
+Preconditions
+
+Steps to Execute
+
+Expected Result
+
+TC_001
+
+Add an FLC product (WA1) to cart
+
+User is logged in
+
+1. Go to an FLC product page (WA1).
+
+Click on 'Add to cart'. | Product should be added to the cart successfully. |
+| TC_002 | Add another FLC product (WA1) to cart | An FLC product is already in the cart | 1. Go to another FLC product page (WA1).
+
+Click on 'Add to cart'. | Product should be added successfully. |
+| TC_003 | Try adding a PSS/GSS product when an FLC product is in the cart | An FLC product is already in the cart | 1. Go to a PSS/GSS product page.
+
+Click on 'Add to cart'. | System should block the action and display a popup: 'You cannot mix Welch Allyn products with other product categories. Please complete your order separately.' |
+| TC_004 | Try adding an FLC product when a PSS/GSS product is in the cart | A PSS/GSS product is already in the cart | 1. Go to an FLC product page.
+
+Click on 'Add to cart'. | System should block the action and display a popup message. |
+| TC_005 | Validate popup message format | A mixed product scenario is triggered | 1. Try adding a mixed product (FLC + PSS/GSS).
+
+Observe the popup message. | The message should be: 'You cannot mix Welch Allyn products with other product categories. Please complete your order separately.' |
+| TC_006 | Verify quick order page restriction | User is on quick order page | 1. Add an FLC product via quick order.
+
+Try adding a PSS/GSS product. | System should restrict the action and display a popup on the quick order page. |
+| TC_007 | Localization verification for 'Add to cart' button | User has selected different languages | 1. Change the website language to FR, EN, IT, ES, NL, DE, or SE.
+
+Verify the 'Add to cart' button text. | Button text should be translated correctly per language:
+
+FR: Ajouter au panier
+
+EN: Add to cart
+
+IT: Aggiungi al carrello
+
+ES: Añadir al carrito
+
+NL: Toevoegen aan winkelwagen
+
+DE: In den Warenkorb
+
+SE: Lägg till i varukorgen |
+| TC_008 | Validate popup message in different languages | User has selected different languages | 1. Change the website language.
+
+Try adding a mixed product (FLC + PSS/GSS).
+
+Observe the popup message. | The popup message should appear in the selected language. |
+
