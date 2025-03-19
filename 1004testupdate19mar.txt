@@ -1,0 +1,38 @@
+| **TC_001** | Add an FLC product (WA1) to cart | Ensure the product can be added to the cart successfully | | | |
+| **Step 1** | Go to an FLC product page (WA1) | User should see the "Add to cart" button | | | |
+| **Step 2** | Click on 'Add to cart' | Product should be added to the cart successfully | | | |
+
+| **TC_002** | Add another FLC product (WA1) to cart | Ensure multiple FLC (WA1) products can be added to the cart | | | |
+| **Step 1** | Go to another FLC product page (WA1) | User should see the "Add to cart" button | | | |
+| **Step 2** | Click on 'Add to cart' | Product should be added to the cart successfully | | | |
+
+| **TC_003** | Try adding a PSS/GSS product when an FLC product is in the cart | Ensure mixed carts are restricted | | | |
+| **Step 1** | Go to a PSS/GSS product page while an FLC product is already in the cart | User should see the "Add to cart" button | | | |
+| **Step 2** | Click on 'Add to cart' | System should block the action and display a popup: 'You cannot mix Welch Allyn products with other product categories. Please complete your order separately.' | | | |
+
+| **TC_004** | Try adding an FLC product when a PSS/GSS product is in the cart | Ensure mixed carts are restricted | | | |
+| **Step 1** | Go to an FLC product page while a PSS/GSS product is already in the cart | User should see the "Add to cart" button | | | |
+| **Step 2** | Click on 'Add to cart' | System should block the action and display a popup message | | | |
+
+| **TC_005** | Validate popup message format | Ensure the popup message is correctly displayed when mixed cart restriction occurs | | | |
+| **Step 1** | Try adding a mixed product (FLC + PSS/GSS) | Popup should be displayed | | | |
+| **Step 2** | Observe the popup message | The message should be: 'You cannot mix Welch Allyn products with other product categories. Please complete your order separately.' | | | |
+
+| **TC_006** | Verify quick order page restriction | Ensure mixed carts are restricted when using the quick order page | | | |
+| **Step 1** | Add an FLC product via quick order | Product should be added successfully | | | |
+| **Step 2** | Try adding a PSS/GSS product via quick order | System should restrict the action and display a popup on the quick order page | | | |
+
+| **TC_007** | Localization verification for 'Add to cart' button | Ensure correct translations for the 'Add to cart' button in different languages | | | |
+| **Step 1** | Change the website language to FR, EN, IT, ES, NL, DE, or SE | User should see the 'Add to cart' button in the selected language | | | |
+| **Step 2** | Verify the button text | Button text should be translated correctly per language:  
+- FR: Ajouter au panier  
+- EN: Add to cart  
+- IT: Aggiungi al carrello  
+- ES: Añadir al carrito  
+- NL: Toevoegen aan winkelwagen  
+- DE: In den Warenkorb  
+- SE: Lägg till i varukorgen | | | |
+
+| **TC_008** | Validate popup message in different languages | Ensure correct translations for the popup message in different languages | | | |
+| **Step 1** | Change the website language | User should see the website content translated | | | |
+| **Step 2** | Try adding a mixed product (FLC + PSS/GSS) | System should block the action and display a translated popup message | | | |
