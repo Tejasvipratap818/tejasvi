@@ -1,0 +1,18 @@
+| TC_001 | Verify Order Blocked Status in SAP ECC for Manual Shipping Orders | Ensure that orders with manual shipping are automatically set to "Blocked" in SAP ECC | | | |
+| Step 1 | Submit an order using the manual shipping option in Hybris | Order should be successfully created in Hybris | | | |
+| Step 2 | Verify the order status in SAP ECC | "Overall Blkd status" should be set to "Blocked" | | | |
+
+| TC_002 | Verify Customer Care Can Identify Blocked Orders | Ensure that Customer Care can identify blocked orders in SAP ECC | | | |
+| Step 1 | Submit an order using the manual shipping option in Hybris | Order should be successfully created in Hybris | | | |
+| Step 2 | Log in to SAP ECC and search for the order | Order should be listed with "Overall Blkd status" set to "Blocked" | | | |
+| Step 3 | Verify that Customer Care can access blocked orders for manual validation | Order should be visible in the appropriate queue for address validation | | | |
+
+| TC_003 | Verify Address Creation and Assignment in SAP ECC | Ensure that after manual validation, the shipping address is properly created and linked in SAP ECC | | | |
+| Step 1 | Submit an order using the manual shipping option in Hybris | Order should be successfully created in Hybris | | | |
+| Step 2 | Validate that the order is marked as "Blocked" in SAP ECC | "Overall Blkd status" should be "Blocked" | | | |
+| Step 3 | Customer Care manually validates and assigns the shipping address in SAP ECC | Address should be successfully assigned and linked to the "Sold-to" ID | | | |
+| Step 4 | Verify the newly assigned address in the customer's Ship-To list on Hybris | The new address should be available for future orders | | | |
+
+| TC_004 | Verify Logic Restriction to WASAP-Related B2B Units | Ensure that this logic applies only to orders from WASAP-related B2B Units | | | |
+| Step 1 | Submit an order using manual shipping for a WASAP-related B2B Unit | Order should be successfully created and marked as "Blocked" in SAP ECC | | | |
+| Step 2 | Submit an order using manual shipping for a non-WASAP B2B Unit | Order should NOT be marked as "Blocked" in SAP ECC | | | |
