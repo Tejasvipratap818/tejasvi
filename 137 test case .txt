@@ -1,0 +1,27 @@
+| TC_001 | Verify Handling Fees Applied for Distributors Using Manual Shipping | Ensure handling fees are applied correctly when a Distributor selects manual shipping | | | |
+| Step 1 | Log in as a user from a B2BUnit flagged as a Distributor | User should be able to access the storefront | | | |
+| Step 2 | Add products to the cart and proceed to checkout | Checkout process should proceed normally | | | |
+| Step 3 | Select manual shipping during checkout | Handling fees of 80€ / 80£ / 800SEK should be added as a separate order line ("DSC") | | | |
+| Step 4 | Complete the order | Order should be successfully placed with the DSC line item visible in the order summary | | | |
+
+| TC_002 | Verify Handling Fees Transmission to SAP ECC | Ensure the DSC line is correctly transmitted to SAP ECC with the order | | | |
+| Step 1 | Submit an order as a Distributor with manual shipping selected | Order should be created in Hybris with DSC line item | | | |
+| Step 2 | Verify order transmission to SAP ECC | The DSC line should be included in the transmitted order data | | | |
+| Step 3 | Validate pricing and product line info in SAP ECC | The DSC line should have the correct price and type as per the handling fee | | | |
+
+| TC_003 | Verify Handling Fees Are Not Applied for Standard Customers | Ensure standard customers do not receive handling fees when selecting manual shipping | | | |
+| Step 1 | Log in as a user from a non-Distributor B2BUnit | User should be able to access the storefront | | | |
+| Step 2 | Add products to the cart and proceed to checkout | Checkout process should proceed normally | | | |
+| Step 3 | Select manual shipping during checkout | No handling fees should be added to the order | | | |
+| Step 4 | Complete the order | Order should be successfully placed without any DSC line item | | | |
+
+| TC_004 | Verify Configurable Handling Fee in Hybris | Ensure handling fees can be adjusted through a configurable field in Hybris | | | |
+| Step 1 | Access the Hybris admin panel | User should be able to access the configuration settings | | | |
+| Step 2 | Modify the handling fee value (e.g., change from 80€ to 100€) | Updated value should be saved successfully | | | |
+| Step 3 | Place an order as a Distributor with manual shipping | The updated handling fee should be reflected in the DSC line item | | | |
+
+| TC_005 | Verify Handling Fee Not Applied When Manual Shipping is Not Selected | Ensure handling fees are only applied when manual shipping is chosen | | | |
+| Step 1 | Log in as a Distributor user | User should be able to access the storefront | | | |
+| Step 2 | Add products to the cart and proceed to checkout | Checkout process should proceed normally | | | |
+| Step 3 | Select a standard shipping method (not manual shipping) | No handling fees should be added to the order | | | |
+| Step 4 | Complete the order | Order should be successfully placed without a DSC line item | | | |
