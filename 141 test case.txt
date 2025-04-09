@@ -1,0 +1,19 @@
+| TC_001 | Verify Photo Exists for Each Capital Product and Spare Part | Ensure each product and spare part has an associated image |
+| Step 1 | Search for a capital product or spare part by material number | Product or spare part should be retrieved successfully |
+| Step 2 | Check for photo availability linked to the product | Product should have at least one image present |
+
+| TC_002 | Verify Image Availability in All Required Dimensions | Ensure that the photo is available in all six specified dimensions |
+| Step 1 | Search for a product with an associated image | Product should be retrieved with image available |
+| Step 2 | Verify image dimensions for the product | All of the following dimensions must be available:
+• 30Wx30H
+• 65Wx65H
+• 96Wx96H
+• 300Wx300H
+• 515Wx515H
+• 1200Wx1200H |
+
+| TC_003 | Verify Duplicate Image is Not Added | Ensure the system does not add an image if one already exists for the product reference |
+| Step 1 | Identify material number of an existing product with images | Product is successfully retrieved |
+| Step 2 | Attempt to upload the same image again | System should identify it as a duplicate |
+| Step 3 | Verify that no duplicate image is stored | Duplicate image should not be added |
+
