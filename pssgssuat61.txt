@@ -18,3 +18,5 @@ Step No.	Test Steps	Expected Result	Actual Result	Status (Pass/Fail)	Comments
 16	Change language on storefront and check upload section	Text, buttons, and error messages are translated properly
 
 Open Backoffice → Search for the respective Cart → Go to the Administration tab	PO document is visible and saved correctly under the “PO Document” section of the cart
+
+Log out and repeat login with same user, but create PSS/GSS order instead of FLC	System should identify order as PSS/GSS
