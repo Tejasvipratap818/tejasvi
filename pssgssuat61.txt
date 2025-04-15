@@ -1,0 +1,18 @@
+
+Step No.	Test Steps	Expected Result	Actual Result	Status (Pass/Fail)	Comments
+1	Go to https://emeaservised1.hillrom and click Sign In	Sign-in page is displayed			
+2	Enter credentials uk@780yopmail.com / Welcome@1234	User successfully logged into UK (EMEA) storefront			
+3	Search and add PSS/GSS product to cart	Product is added successfully			
+4	Click on Proceed to checkout	Checkout page is displayed			
+5	Verify PO upload option appears for PSS/GSS order	File upload option is available			
+6	Verify instruction text for PSS/GSS PO upload	“Please attach your PO Document to Proceed (Optional)” is shown			
+7	Click “Next” without uploading PO document	No error appears, user proceeds to next step			
+8	Upload a valid PO file (e.g., PDF < 10MB) and click “Next”	File is accepted and saved in cart (verify in Backoffice > Cart > Administration)			
+9	Upload a file of exactly 10MB	File is accepted successfully			
+10	Try uploading file >10MB (e.g., 10.5MB)	Error message displayed: “Maximum file size allowed: 10MB”			
+11	Upload valid supported formats (PDF, JPEG, PNG)	Files are uploaded successfully			
+12	Try uploading unsupported file (e.g., .exe)	Upload fails, file not displayed			
+13	Upload a file and verify Select File button behavior	Button is disabled after file is uploaded			
+14	Click on “Delete Uploaded File” button	File is deleted, Select File button is enabled again			
+15	Verify uploaded file is saved at order level	File is available in Backoffice > Order > Administration			
+16	Change language on storefront and check upload section	Text, buttons, and error messages are translated properly
