@@ -25,5 +25,9 @@ File should be accepted and uploaded successfully
 9	Try uploading file > 10MB (e.g., 10.5MB)	Error message displayed: “Maximum file size allowed: 10MB”			
 10	Try uploading file in invalid format (e.g., .exe)	File upload fails and file not displayed			
 11	Upload valid format (PDF/JPEG/PNG) file within 10MB	File accepted without error, stored at order level in Backoffice			
-12	Logout and login to US/Canada storefront, create FLC order	Order created successfully			
-13	Proceed to checkout in US/Canada storefront	PO Upload option should NOT be visible for FLC orders outside EMEA		
+12	Logout and login to US/Canada storefront, create FLC order	Order created successfully
+13	Proceed to checkout in US/Canada storefront	PO Upload option should NOT be visible for FLC orders outside EMEA	
+
+
+Upload a file successfully	Select File button is disabled once the file is uploaded			
+15	Delete the uploaded file	Select File button is enabled again once the uploaded file is deleted
