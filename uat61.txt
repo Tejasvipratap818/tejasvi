@@ -10,3 +10,15 @@ Step No.	Test Steps	Expected Result	Actual Result	Status (Pass/Fail)	Comments
 9	Proceed to checkout page	PO Upload option should not be visible			
 10	Create GSS/PSS order in US/Canada storefront	Order is created successfully			
 11	Go to checkout page	PO Upload option should not be visible
+
+
+
+	Verify PO instruction message on checkout page	Instruction shown: “Please attach your PO document to proceed (Required)...”			
+6	Click on “Next” without uploading PO document	Error shown: “Uploading a PO document is mandatory for FLC orders. Please attach your PO document to proceed.”			
+7	Upload a valid PO file (e.g., PDF < 10MB) and click “Next”	File is accepted and user is allowed to move to the next step			
+8	Try uploading multiple files	System allows only one file			
+9	Try uploading file > 10MB (e.g., 10.5MB)	Error message displayed: “Maximum file size allowed: 10MB”			
+10	Try uploading file in invalid format (e.g., .exe)	File upload fails and file not displayed			
+11	Upload valid format (PDF/JPEG/PNG) file within 10MB	File accepted without error, stored at order level in Backoffice			
+12	Logout and login to US/Canada storefront, create FLC order	Order created successfully			
+13	Proceed to checkout in US/Canada storefront	PO Upload option should NOT be visible for FLC orders outside EMEA		
