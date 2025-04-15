@@ -1,15 +1,12 @@
-
-Test / Step	Description	Expected Result	PASS/FAIL	Comments	Evidence
-TC_001 - Step 1	Go to https://emeaservised1.hillrom and click on Sign In	Login page should be displayed			
-TC_001 - Step 2	Enter credentials:
-User ID: uk@780yopmail.com
-Password: Welcome@1234	User should be successfully logged in and redirected to EMEA UK storefront homepage			
-TC_001 - Step 3	Search for FLC product vcbn123mk and add to cart	Product should be added to cart successfully			
-TC_001 - Step 4	Proceed to checkout	Checkout page should open with shipping & billing address sections			
-TC_001 - Step 5	Verify if PO Document Upload option is displayed	PO Upload option should be visible (since it’s an EMEA FLC order)			
-TC_001 - Step 6	Log out and repeat login with same user, but create PSS/GSS order instead of FLC	System should identify order as PSS/GSS			
-TC_001 - Step 7	Go to checkout for the PSS/GSS order	PO Upload option should still be visible (as it's still EMEA region)			
-TC_001 - Step 8	Now login to US/Canada storefront (you can provide those creds if needed), and create FLC order	Order type = FLC but region = non-EMEA			
-TC_001 - Step 9	Navigate to checkout page	PO Upload option should not be visible			
-TC_001 - Step 10	Repeat with US/Canada storefront and create GSS/PSS order	System should recognize order as GSS/PSS			
-TC_001 - Step 11	Navigate to checkout page	PO Upload option should not be visible
+Step No.	Test Steps	Expected Result	Actual Result	Status (Pass/Fail)	Comments
+1	Go to https://emeaservised1.hillrom and click Sign In	Sign-in page is displayed			
+2	Enter username: uk@780yopmail.com and password: Welcome@1234	User successfully logged into UK (EMEA) storefront			
+3	Search and add FLC product vcbn123mk to cart	Product is added successfully			
+4	Proceed to checkout page	Checkout page is displayed			
+5	Verify if "Upload PO Document" option is visible	PO Upload option is visible for EMEA FLC order			
+6	Log out and login again (same user), place PSS/GSS order	Order is created as PSS/GSS			
+7	Go to checkout page	PO Upload option is visible for EMEA PSS/GSS order			
+8	Login to US/Canada storefront and create FLC order	Order is created as FLC			
+9	Proceed to checkout page	PO Upload option should not be visible			
+10	Create GSS/PSS order in US/Canada storefront	Order is created successfully			
+11	Go to checkout page	PO Upload option should not be visible
