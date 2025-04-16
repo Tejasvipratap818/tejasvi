@@ -1,0 +1,9 @@
+Verify Creation of New Fields in Administration Tab of Base Store for Western Europe Countries
+
+1	Login to the Backoffice	User is successfully logged into the Backoffice
+2	Navigate to Base Stores section	All base stores for various countries are displayed
+3	Open the base store for a Western Europe country (e.g., France, Germany, etc.)	Base store details page is opened
+4	Go to the Administration tab of the base store	Administration tab is displayed
+5	Verify the presence of new fields	The following new fields should be visible:
+1. Quote & Order Email Address (PSS/GSS)
+2. Quote & Order Email Address (FLC)
