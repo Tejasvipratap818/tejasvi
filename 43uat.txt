@@ -20,3 +20,11 @@ Step No.	Test Steps	Expected Result
 9	Either Create a Quote or Proceed to Checkout and place the order	Quote or Order is created successfully
 10	Check the inbox of the email address specified in Quote & Order Email Address (PSS/GSS)	A confirmation email for the quote/order should be received
 11	Return to Backoffice → Base Store → Administration Tab	Field Quote & Order Email Address (PSS/GSS) remains saved
+
+Step No.	Test Steps	Expected Result
+1	Go to https://emeaservised1.hillrom and click Sign In	Sign-in page is displayed
+2	Enter credentials: uk@780yopmail.com / Welcome@1234	User successfully logged into UK (EMEA) storefront
+3	Click on the User Icon on the top right corner	User menu is displayed
+4	Select Repair Request from the menu	Repair Request form is opened
+5	Verify presence of the new field in the form	A new field named "Type of Product (name of bed, surgical table, surgical light etc.)" is visible
+6	Verify presence of the new hyperlink in the form	A hyperlink labeled "Click here for Welch Allyn Repair/Calibration/RMA form" is visible
