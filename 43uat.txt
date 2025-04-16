@@ -7,3 +7,16 @@ Verify Creation of New Fields in Administration Tab of Base Store for Western Eu
 5	Verify the presence of new fields	The following new fields should be visible:
 1. Quote & Order Email Address (PSS/GSS)
 2. Quote & Order Email Address (FLC)
+
+Step No.	Test Steps	Expected Result
+1	Login to Backoffice and navigate to the B2B Unit	B2B Unit details are displayed
+2	Check the attribute Receive Order Confirmation Copy	The attribute should be marked as True
+3	Navigate to the Base Store of the relevant country	Base store details are displayed
+4	In the Administration tab, locate the field Quote & Order Email Address (PSS/GSS)	Field is visible and editable
+5	Manually enter a valid test email address in this field	Email address is saved successfully
+6	Login to the Storefront as a user belonging to the configured B2B unit	User is successfully logged in and lands on the homepage
+7	Navigate to Hillrom Parts, select a category, and choose a PSS/GSS product	Product details page (PDP) is displayed
+8	Click on Add to Cart, then go to the Cart Page	Product is added and cart page is displayed
+9	Either Create a Quote or Proceed to Checkout and place the order	Quote or Order is created successfully
+10	Check the inbox of the email address specified in Quote & Order Email Address (PSS/GSS)	A confirmation email for the quote/order should be received
+11	Return to Backoffice → Base Store → Administration Tab	Field Quote & Order Email Address (PSS/GSS) remains saved
