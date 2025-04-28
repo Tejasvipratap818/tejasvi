@@ -33,4 +33,4 @@ Step No.	Test Steps	Expected Result
 In the Administration tab, navigate to the Restricted B2B Units attribute, enter a B2B Unit, and save it.
 
 Expected Result:
-The B2B Unit is successfully added and saved under the Restricted B2B Units attribute.
+User is able to successfully add and save the B2B Unit under the Restricted B2B Units attribute.
