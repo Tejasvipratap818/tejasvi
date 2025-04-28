@@ -1,0 +1,40 @@
+Product Restriction Based on B2BUnit — Test Cases
+
+Test Case ID	Test Case Description	Expected Outcome	Actual Outcome	Pass/Fail	Comments
+TC_001	Verify Restricted Products Configuration in Backoffice	Admin should be able to add restricted Supercategories, Models, or Products for a B2BUnit.			
+
+Step No.	Description	Expected Result	Actual Result	Pass/Fail	Comments
+Step 1	Login to Hybris Backoffice	User should successfully log in.			
+Step 2	Navigate to a B2BUnit configuration	B2BUnit page should open.			
+Step 3	Add restricted Supercategories, Products, or Models	Restricted list should be saved successfully.			
+| TC_002 | Verify Restricted Product Visibility on PLP | Restricted product should be visible on PLP for the user. | | | |
+
+| Step No. | Description | Expected Result | Actual Result | Pass/Fail | Comments | | Step 1 | Login to storefront with a restricted B2BUnit user | User should be successfully logged in. | | | | | Step 2 | Search for a restricted product on PLP | Restricted product should appear on PLP. | | | |
+
+| TC_003 | Verify Restriction Message on PDP for Restricted Product | Error message should appear on PDP when accessing a restricted product. | | | |
+
+| Step No. | Description | Expected Result | Actual Result | Pass/Fail | Comments | | Step 1 | Click on the restricted product on PLP | PDP should open with a restriction message displayed. | | | | | Step 2 | Verify the error message content | Error message: "This item is subject to restrictions (installation, training etc...) Please contact your local customer service team: - Phone number / - Email address" should be visible. | | | |
+
+| TC_004 | Verify Add to Cart Button Hidden for Restricted Products | Add to Cart button should not be visible on PDP for restricted products. | | | |
+
+| Step No. | Description | Expected Result | Actual Result | Pass/Fail | Comments | | Step 1 | Open PDP of a restricted product | Add to Cart button should NOT be displayed. | | | |
+
+| TC_005 | Verify Restricted Product Access through Direct URL | User should be redirected to PDP with restriction message when accessing through direct URL. | | | |
+
+| Step No. | Description | Expected Result | Actual Result | Pass/Fail | Comments | | Step 1 | Access the restricted product directly via URL | PDP opens and restriction message is displayed. | | | |
+
+| TC_006 | Verify Restricted Product Access from Homepage Carousel | User should be redirected to PDP with restriction message when accessing from homepage carousel. | | | |
+
+| Step No. | Description | Expected Result | Actual Result | Pass/Fail | Comments | | Step 1 | Click a restricted product from the homepage carousel | PDP opens and restriction message is displayed. | | | |
+
+| TC_007 | Verify Restricted Product Access from Header Menu | User should be redirected to PDP with restriction message when accessing from header menu. | | | |
+
+| Step No. | Description | Expected Result | Actual Result | Pass/Fail | Comments | | Step 1 | Click a restricted product from the header menu | PDP opens and restriction message is displayed. | | | |
+
+| TC_008 | Validate Country Specific Customer Service Information | Phone number and Email address should be displayed as per B2BUnit country. | | | |
+
+| Step No. | Description | Expected Result | Actual Result | Pass/Fail | Comments | | Step 1 | Login with a user from a different country B2BUnit | Phone and email should display correctly according to user’s B2BUnit country. | | | |
+
+| TC_009 | Verify Access Control Based on Authentication | Restrictions should only apply to authenticated users linked to a B2BUnit. | | | |
+
+| Step No. | Description | Expected Result | Actual Result | Pass/Fail | Comments | | Step 1 | Access a restricted product without logging in | No restriction message is displayed. | | | | | Step 2 | Access the same product after logging in with a restricted B2BUnit user | Restriction message should be displayed. | | | |
