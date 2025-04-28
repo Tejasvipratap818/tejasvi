@@ -28,3 +28,9 @@ Step No.	Test Steps	Expected Result
 4	Select Repair Request from the menu	Repair Request form is opened
 5	Verify presence of the new field in the form	A new field named "Type of Product (name of bed, surgical table, surgical light etc.)" is visible
 6	Verify presence of the new hyperlink in the form	A hyperlink labeled "Click here for Welch Allyn Repair/Calibration/RMA form" is visible
+
+
+In the Administration tab, navigate to the Restricted B2B Units attribute, enter a B2B Unit, and save it.
+
+Expected Result:
+The B2B Unit is successfully added and saved under the Restricted B2B Units attribute.
